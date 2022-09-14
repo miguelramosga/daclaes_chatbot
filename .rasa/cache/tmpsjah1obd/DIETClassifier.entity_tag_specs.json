@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-clarin",
+      "2": "I-clarin",
+      "3": "L-clarin",
+      "4": "U-clarin",
+      "5": "B-clarin_k",
+      "6": "I-clarin_k",
+      "7": "L-clarin_k",
+      "8": "U-clarin_k",
+      "9": "B-clarink",
+      "10": "I-clarink",
+      "11": "L-clarink",
+      "12": "U-clarink",
+      "13": "B-dariah",
+      "14": "I-dariah",
+      "15": "L-dariah",
+      "16": "U-dariah",
+      "17": "B-país",
+      "18": "I-país",
+      "19": "L-país",
+      "20": "U-país",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-clarin": 1,
+      "I-clarin": 2,
+      "L-clarin": 3,
+      "U-clarin": 4,
+      "B-clarin_k": 5,
+      "I-clarin_k": 6,
+      "L-clarin_k": 7,
+      "U-clarin_k": 8,
+      "B-clarink": 9,
+      "I-clarink": 10,
+      "L-clarink": 11,
+      "U-clarink": 12,
+      "B-dariah": 13,
+      "I-dariah": 14,
+      "L-dariah": 15,
+      "U-dariah": 16,
+      "B-país": 17,
+      "I-país": 18,
+      "L-país": 19,
+      "U-país": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

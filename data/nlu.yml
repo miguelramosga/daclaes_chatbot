@@ -1,0 +1,279 @@
+version: "3.1"
+
+nlu:
+- intent: saludo
+  examples: |
+    - hola
+    - buenas tardes
+    - buenos días
+    - hola buenas
+    - buenas
+    - qué hay?
+    - ey
+    - holaaa
+    - holi
+    - buenas noches
+    - hello
+    - hi
+    - qué tal?
+    - cómo estas?
+
+- intent: despedida
+  examples: |
+    - adiós
+    - hasta pronto
+    - que vaya bien
+    - chao
+    - hasta nunca
+    - adiooos
+    - saludos
+    - hasta luego 
+    - bye
+    - goodbye
+    - hasta mañana
+    - hasta otro día
+    - hasta que nos volvamos a ver
+
+- intent: afirmar
+  examples: |
+    - sí
+    - la verdad que sí
+    - en efecto
+    - efectivamente
+    - correcto
+    - afirmativo
+    - siii
+    - por descontado
+
+- intent: negar
+  examples: |
+    - no
+    - nooo
+    - la verdad que no
+    - nunca
+    - en absoluto 
+    - no creo
+    - no quiero saber nada más
+    - negativo
+
+- intent: agradecer
+  examples: |
+    - gracias
+    - muchas gracias
+    - estoy muy agradecido
+    - perfecto gracias
+
+- intent: identidad
+  examples: |
+    - quién eres
+    - cómo te llamas
+    - en qué me puedes ayudar
+    - eres un humano
+    - eres un robot
+    - eres un chatbot
+    - eres un asistente conversacional
+    - eres un agente conversacional
+    - eres un programa
+    - una cosa más
+    - quiero saber algo más
+
+- intent: conocer_infraestructuras
+  examples: |
+    - qué infraestructuras hay?
+    - cuáles son las infraestructuras europeas
+    - quiero conocer las infraestructuras que hay a nivel europeo
+    - quiero saber más de [clarin](clarin)
+    - información [clarin](clarin)
+    - info [clarin](clarin)
+    - qué es [dariah](dariah)
+    - me interesa mucho conocer algo de [dariah](dariah)
+    - explícame qué es [clarin k](clarin_k)
+    - a ver dime algo de [clarin k](clarin_k)
+
+- intent: analizar_etiquetar_textos
+  examples: |
+    - quiero analizar y etiquetar textos
+    - herramientas para analizar textos
+    - recursos que sirvan para etiquetar
+    - herramientas para analizar o etiquetar textos
+    - etiquetar textos en [clarin](clarin)
+    - quiero saber cuáles son las herramientas en [clarin](clarin) para analizar textos 
+    - analizar escritos en [clarin k](clarin_k)
+    - herramientas etiquetar textos [clarin k](clarin_k)
+    - explícame qué es [UDPipe](udpipe)
+    - info de [Voyant Tools](voyant_tools)
+    - [Text Tonsorium](text_tonsorium) qué es?
+    - me gustaría saber detalles sobre [NLP-HUB](nlp_hub)
+    - cuenta algo de [NameTag](nametag)
+    - saber más de [WebSty](websty)
+    - qué es [Vocabulary analyzer](vocabulary_analyzer)
+    - conocer algo más de [Ngram Statistics](ngram_statistics)
+    - di alguna cosa de [UPF Freeling-based part-of-speech tagger](upf_pos_tagger)
+    - no sé nada de [Análisis de relaciones de dependencias](analisis_relaciones_dependencias)
+    - quiero que me cuentes más de la herramienta [Freeling Named Entity Recognition](freeling_named_entity_recognition)
+    - cuenta lo que es [WSD-IXA](wsd_ixa)
+    - quiero saber lo que es [Ixa pipes](ixa_pipes)
+    - más información de [ixaKat](ixakat)
+    - [Maltixa](maltixa) info
+    - qué es exactamente lo que se conoce como [Eustagger](eustagger)
+    - di lo que sepas de [Xuxen](xuxen)
+    - y de [Analhitza](analhitza) qué me puedes contar?
+
+- intent: trabajar_metadatos
+  examples: |
+    - quiero trabajar con metadatos
+    - cómo puedo gestionar metadatos
+    - herramientas para los metadatos
+    - háblame de [CMDI Explorer](cmdi_explorer)
+    - quiero saber más de [Coala](coala)
+
+- intent: analizar_audio
+  examples: |
+    - quiero analizar pistas de audio
+    - analizar audio
+    - analizar sonido
+    - herramientas para el sonido
+    - estudiar señales de audio
+    - qué es [SpeakDiar](speakdiar)
+    - explícame algo de [Voice Activity Detection](voice_activity_detection)
+    - háblame de [WebMAUS General](webmaus_general)
+    - cuéntame lo que es [WebMAUS Basic](webmaus_basic)
+    - la herramienta [WebMINNI](webminni) info
+    - dime algo de [Chunker](chunker)
+    - quiero saber más de [ChannelSeparator](channelseparator)
+    - cuéntame algo de información sobre [Formant Analysis](formant_analysis)
+    - me gustaría obtener info de [EMU webApp](emu_webapp)
+
+- intent: convertir_formatos_audio
+  examples: |
+    - quiero convertir el formato de un audio
+    - quiero cambiar formato de pista de audio
+    - herramientas para modificar formato de un archivo de sonido
+    - más información de [G2P](g2p)
+    - cuéntame más de [AnnotConv](annotconv)
+    - háblame de lo que es [Chunk Preparation](chunk_preparation)
+  
+- intent: mejorar_calidad_manejo
+  examples: |
+    - quiero mejorar calidad de pista de audio
+    - mejorar manejo de archivo multimedia
+    - cómo cambiar el manejo de un texto
+    - convertir en texto plano
+    - qué es [AudioEnhance](audioenhance)
+    - info de [TextEnhance](textenhance)
+    - quiero más detalles de [TextAlign](textalign)
+
+- intent: sistemas_gestion_contenido
+  examples: |
+    - sistemas de gestión del contenido
+    - cuéntame sobre los sistemas para la gestión de contenido
+    - gestionar contenido
+
+- intent: servicios_varios_dariah
+  examples: |
+    - quiero conocer los servicios dariah
+    - qué servicios varios tiene dariah
+    - háblame de los servicios de dariah
+    - dariah servicios generales
+    - qué es el [DARIAH-DE Repository](dariah_repository)
+    - cuéntame algo de [Vocabs services](vocabs_services)
+    - háblame de [Standardization Survival Kit](standardization_survival_kit)
+    - [DARIAH docs](dariah_docs) qué es exactamente?
+    - quiero saber más de [Isidore](isidore)
+    - info de [Collection Registry](collection_registry)
+    - me gustaría que me hablaras de [DARIAH WIKI](dariah_wiki)
+    - información sobre [CodiMD](codimd)
+    - di alguna cosa de [Generic Search](generic_search)
+    - puedes hablarme de [TaDiRAH](tadirah)
+    - [DARIAH AAI](dariah_aai) cuéntame más
+
+- intent: formacion_dariah
+  examples: |
+    - explícame los recursos de formación de dariah
+    - hay alguna oferta formativa
+    - recursos de aprendizaje
+    - servicios para aprender sobre humanidades digitales
+    - qué es el [DARIAH-Campus](dariah_campus)
+    - háblame de [PARTHENOS](parthenos)
+    - quiero saber más del [Digital Humanities Course Registry](course_registry)
+    - me interesa conocer qué es [dariahTeach](dariahteach)
+  
+- intent: herramientas_dariah
+  examples: |
+    - quiero conocer las herramientas de dariah
+    - me interesa saber las herramientas que hay en dariah
+    - herramientas dariah
+    - me interesa [Topics Explorer](topics_explorer)
+    - quiero saber más de [MEI Score Editor](mei_score_editor)
+    - cuéntame algo de [ConedaKOR](conedakor)
+    - qué es [TextGrid](textgrid)?
+    - me gustaría conocer [Geo-Browser](geo_browser)
+
+- intent: transcribir_audio_texto
+  examples: |
+    - herramientas para transcribir
+    - qué hay para la transcripción de textos?
+    - me interesa conocer lo que hay para transcribir audio y texto
+    - transcribir audio texto
+    - háblame de [Pho2Syl](phosyl)
+    - info de [Subtitle](subtitle)
+    - cuéntame algo de información sobre la herramienta [Anonymizer](anonymizer)
+
+- intent: analizar_poesia
+  examples: |
+    - analizar poesía
+    - herramientas de análisis de poemas
+    - dime algo de las herramientas para analizar textos poéticos
+    - [Averell](averell) info
+    - cuéntame más información de [Jollyjumper](jollyjumper)
+    - de [Rantanplan](rantanplan) qué puedes contarme?
+    - me interesa saber qué es [PoetryLab](poetrylab)
+
+- intent: analizar_dialectos
+  examples: |
+    - analizar dialectos
+    - estudiar cuestiones dialectológicas
+    - herramientas para el estudio de los dialectos
+    - estudiar aspectos dialectológicos
+    - dialectología perceptual
+    - qué es [PDMapping](pdmapping)?
+    - me interesa saber mucha más información de [FOLErPa](folerpa)
+    - quiero que me cuentes algo de [BASYQUE](basyque)
+
+- intent: conocer_corpus
+  examples: |
+    - quiero conocer los corpus que hay disponibles
+    - conocer corpus
+    - corpus de CLARIN K
+    - qué corpora se ofrecen desde las infraestructuras
+    - háblame de [RILG](rilg)
+    - quiero saber más de [ETSC](etsc)
+    - [Universal Dependencies](ud_treebank) para el vasco qué es?
+    - info de [EPEC-KORREF](epec_korref)
+    - cuéntame alguna cosa de [EPEC-EuSemcor](epec_eusemcor)
+    - detalles de [ZT corpusa](zt_corpusa)
+    - dime algo de [EPEC-DEP](epec-dep)
+
+- intent: conocer_recursos_léxicos
+  examples: |
+    - quiero conocer los recursos léxicos
+    - CLARIN K recursos léxicos
+    - háblame de qué recursos para el léxico hay
+    - quiero saber más del [Diccionario gallego](diccionario_gallego)
+    - información del recurso [Konbitzul](konbitzul)
+    - cuéntame alguna cosa de [EusWN](euswn)
+    - qué es [e-ROLda](erolda)
+  
+- intent: conocer_modelos_ling
+  examples: |
+    - quiero conocer los modelos lingüísticos
+    - háblame de modelos de la lingüística que tiene CLARIN K
+    - modelos lingüísticos más información
+    - cuéntame más info de [EDGK](edgk)
+    - quiero que me cuentes algo de [BERTeus](berteus)
+
+- intent: herramientas_geograficas
+  examples: |
+    - conocer herramientas geográficas
+    - qué herramientas para analizar aspectos geográficos hay
+    - CLARIN K herramientas para la geografía

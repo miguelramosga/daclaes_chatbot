@@ -1,0 +1,674 @@
+version: "3.1"
+
+intents:
+  - saludo
+  - despedida
+  - afirmar
+  - negar
+  - agradecer
+  - identidad
+  - conocer_infraestructuras
+  - analizar_etiquetar_textos
+  - trabajar_metadatos
+  - analizar_audio
+  - convertir_formatos_audio
+  - mejorar_calidad_manejo
+  - sistemas_gestion_contenido
+  - servicios_varios_dariah
+  - formacion_dariah
+  - herramientas_dariah
+  - transcribir_audio_texto
+  - analizar_poesia
+  - analizar_dialectos
+  - conocer_corpus
+  - conocer_recursos_lexicos
+  - conocer_modelos_ling
+  - herramientas_geograficas
+
+responses:
+  utter_saludo:
+  - text: "¡Hola! Soy un asistente conversacional que puede ayudarte a orientarte en el área de las Humanidades Digitales si quieres hacer una investigación en torno al castellano, el catalán, el vasco o el gallego. Puedo responder a distintos tipos de consultas:
+          \n- Si quieres saber más sobre infraestructuras europeas, escríbeme 'saber más de infraestructuras europeas'
+          \n- Si te interesa conocer las herramientas que hay para una tarea en concreto, escríbeme 'analizar o etiquetar textos', 'trabajar con metadatos', 'analizar pistas de audio', 'convertir formatos de audio', 'mejorar la calidad o el manejo de los archivos', 'sistemas de gestión de contenido', 'servicios varios de DARIAH', 'formación en DARIAH', 'herramientas de dariah', 'transcribir pistas de audio', 'analizar poesía', 'analizar cuestiones dialectológicas', 'conocer corpus', 'conocer recursos léxicos', 'conocer modelos lingüísticos' o 'herramientas geográficas'.
+          \n- Si te sabes el nombre de alguna herramienta de DARIAH, CLARIN o el Centro K en España con la que se pueda abordar el castellano o las lenguas cooficiales, pregúntame por ella y te daré información al respecto." 
+
+  utter_despedida:
+  - text: "Espero haberte podido ayudar. ¡Hasta pronto!"
+
+  utter_afirmacion:
+  - text: "Perfecto. 
+          \nSi quieres que te ayude en algo más, recuerda que me puedes preguntar por las infraestructuras DARIAH, CLARIN y el Centro K en España y los recursos y herramientas que ofrecen al usuario."
+
+  utter_negacion:
+  - text: "Vaya... Si quieres que te ayude en algo más, recuerda que me puedes preguntar por las infraestructuras DARIAH, CLARIN y el Centro K en España y los recursos y herramientas que ofrecen al usuario."
+
+  utter_agradecimiento:
+  - text: "No hay de qué. Me alegra haberte podido ayudar. ¡Hasta pronto!"
+
+  utter_identidad:
+  - text: "Soy un asistente conversacional que puede ayudarte a orientarte en el área de las Humanidades Digitales si quieres hacer una investigación en torno al castellano, el catalán, el vasco o el gallego. Puedo responder a distintos tipos de consultas:
+          \n- Si quieres saber más sobre infraestructuras europeas, escríbeme 'saber más de infraestructuras europeas'
+          \n- Si te interesa conocer las herramientas que hay para una tarea en concreto, escríbeme 'analizar o etiquetar textos', 'trabajar con metadatos', 'analizar pistas de audio', 'convertir formatos de audio', 'mejorar la calidad o el manejo de los archivos', 'sistemas de gestión de contenido', 'servicios varios de DARIAH', 'formación en DARIAH', 'herramientas de dariah', 'transcribir pistas de audio', 'analizar poesía', 'analizar cuestiones dialectológicas', 'conocer corpus', 'conocer recursos léxicos', 'conocer modelos lingüísticos' o 'herramientas geográficas'.
+          \n- Si te sabes el nombre de alguna herramienta de DARIAH, CLARIN o el Centro K en España con la que se pueda abordar el castellano o las lenguas cooficiales, pregúntame por ella y te daré información al respecto."
+
+  utter_conocer_infraestructuras:
+  - text: "Las infraestructuras europeas más importantes en el área de las Humanidades Digitales son CLARIN y DARIAH, aunque también es muy útil el centro CLARIN K que hay en España. Selecciona el botón que quieras en función de la infraestructura sobre la que quieras más información."
+    buttons:
+      - title: "CLARIN"
+        payload: '/conocer_infraestructuras{{"clarin":"clarin"}}'
+      - title: "DARIAH"
+        payload: '/conocer_infraestructuras{{"dariah":"dariah"}}'
+      - title: "Centro CLARIN K"
+        payload: '/conocer_infraestructuras{{"clarin_k":"clarin k"}}'
+
+  utter_conocer_clarin:
+  - text: "Common Language Resources and Technology Infrastructure (CLARIN) es una infraestructura europea que pone el foco de atención en el lenguaje y la tecnología y se inserta dentro del área de las Humanidades Digitales. Esta se lleva ideando desde 2006 y, en 2012, pasa a estar coordinada por el European Research Infrastructure Consortium (ERIC). Su importancia reside en que permite acceder a una gran cantidad de herramientas y recursos que pueden ser sumamente útiles para los investigadores. Si se quieren hacer estudios en torno al español, el catalán, el vasco el gallego, hay servicios disponibles que las tareas que se mencionan a continuación. Puedes hacer clic en el botón que quieras para obtener más información:"
+    buttons:
+      - title: "Analizar y etiquetar textos"
+        payload: "/analizar_etiquetar_textos"
+      - title: "Trabajar con metadatos"
+        payload: "/trabajar_metadatos"
+      - title: "Analizar pistas de audio"
+        payload: "/analizar_audio"
+      - title: "Convertir formatos de pistas de audio" 
+        payload: "/convertir_formatos_audio"
+      - title: "Mejorar calidad o manejo de los archivos"
+        payload: "/mejorar_calidad_manejo" 
+      - title: "Sistemas de gestión del contenido"
+        payload: "/sistemas_gestion_contenido"
+      - title: "Transcribir pistas de audio"
+        payload: "/transcribir_audio_texto"
+  
+  utter_conocer_dariah:
+  - text: "Digital Research Infrastructure for the Arts and Humanities (DARIAH) es una infraestructura de investigación que se centra en las Humanidades Digitales. Se empezó a planear a partir del 2006 y, en 2014, recibe la mención de DARIAH ERIC, pasando entonces a ser coordinada por el European Research Infrastructure Consortium. Aunque presenta algunas limitaciones si no se forma parte de la infraestructura en calidad de miembro, tiene una serie de herramientas y servicios de las que también se puede hacer uso si se quiere realizar alguna investigación en torno a las lenguas de España. Puedes hacer clic en cualquiera de las siguientes opciones para obtener más información al respecto:"
+    buttons:
+      - title: "Servicios varios" 
+        payload: "/servicios_varios_dariah"
+      - title: "Formación"
+        payload: "/formacion_dariah" 
+      - title: "Herramientas"
+        payload: "/herramientas_dariah"      
+
+  utter_conocer_clarink:
+  - text: "El centro CLARIN K es el primer centro de dicha infraestructura que se creó en España, que se consolidó en 2015 gracias a los tres grupos de investigación que lo sostienen: el grupo IXA de la Universidad del País Vasco/Euskal Herriko Unibertsitea (UPV/EHU), el Centro de Competencias CLARIN IULA de la Universidad Pompeu Fabra (UPF) y el Laboratorio de Innovación en Humanidades Digitales de la Universidad Nacional de Educación a Distancia (UNED). Mediante dicho centro, se proporciona orientación a los usuarios, plataformas de aprendizaje, programas formativos y acceso a herramientas y servicios importantes dentro de las Humanidades Digitales. Para saber más de lo que ofrece, puedes pinchar en cualquiera de los siguientes botones:" 
+    buttons:
+      - title: "Analizar poesía"
+        payload: "/analizar_poesia"
+      - title: "Analizar cuestiones dialectológicas"
+        payload: "/analizar_dialectos"
+      - title: "Analizar cuestiones geográficas"
+        payload: "/herramientas_geograficas"
+      - titlee: "Analizar y etiquetar textos"
+        payload: "/analizar_etiquetar_textos"
+      - title: "Consultar corpus"
+        payload: "/conocer_corpus"
+      - title: "Consultar recursos léxicos"
+        payload: "/conocer_recursos_léxicos"
+      - title: "Consultar modelos lingüísticos"
+        payload: "/conocer_modelos_ling"
+  
+  utter_analizar_etiquetar_textos:
+  - text: "Para analizar y etiquetar textos, hay una gran variedad de herramientas que te pueden ser útiles. Índicame de qué infraestructura te interesa conocerlas:
+          - CLARIN
+          - CLARIN K"
+
+  utter_analizar_etiquetar_textos_clarin:
+  - text: "En CLARIN, son múltiples herramientas las que te permiten analizar los textos o etiquetarlos:
+          \n- UDPipe es un conjunto de herramientas para analizar y etiquetar lingüísticamente que posibilitan llevar a cabo muchas funciones distintas, como tokenizar, lematizar, etc.
+          \n- Voyant Tools permite analizar textos con criterios académicos e incluso añadir funcionalidades al mismo para que después puedan seguir siendo abordados.
+          \n- Text Tonsorium, por otra parte, ayuda a lematizar.
+          \n- NLP-HUB es también un conjunto de herramientas que sirven para llevar a cabo tareas relacionadas con el procesamiento del lenguaje natural.
+          \n- NameTag es una herramienta que permite llevar a cabo un reconocimiento de entidades nombradas.
+          \n- Con WebSty se puede analizar textos conjuntamente y analizarlos morfológicamente, extraer sus características, etiquetar las palabras, etc.
+          \n\n¡Escríbeme el nombre de la herramienta sobre la que quieres saber más!"
+  
+  utter_analizar_etiquetar_textos_clarink:
+  - text: "Es posible mencionar muchas herramientas que hay en CLARIN K para analizar o etiquetar textos:
+          \n- Vocabulary analyzer Web Service ayuda a calcular medidas lexicográficas.
+          \n- Ngram Statistics de Pedersen ayuda a identificar palabras en corpus de grandes magnitudes.
+          \n- UPF Freeling-based part-of-speech tagger permite etiquetar partes o categorías de la oración, lo que en inglés se conoce como Part-of-Speech (POS).
+          \n- Análisis de relaciones de dependencias es otra herramienta que permite identificar el tipo de relaciones que hay entre las palabras de un texto.
+          \n- Freeling Named Entity Recognition ayuda llevar a cabo un reconocimiento de entidades nombradas.
+          \n- WSD-IXA posibilita desambiguar el sentido de las palabras.
+          \n- Ixa pipes es un conjunto de herramientas que sirven para el procesamiento del lenguaje natural, por lo que permiten lematizar, tokenizar, etc. 
+          \n- ixaKat, por su parte, también facilita el procesamiento del lenguaje natural y permite llevar a cabo análisis morfosintácticos.
+          \n- Maltika ayuda a analizar sintácticamente oraciones y a mostrar los resultados de forma visual.
+          \n- Mediante Eustagger es posible etiquetar morfosintácticamente, anotar categorías, etc.
+          \n- Xuxen, en cambio, es un corrector lingüístico ampliamente conocido y utilizado.
+          \n- Analhitza posibilita realizar análisis de distinto tipo: de categorías, morfológico, de secuencias de palabras, etc.
+          \n\n¡Escríbeme el nombre de la herramienta sobre la que quieres saber más!"
+
+  utter_analizar_etiquetar_textos_udpipe:
+  - text: "UDPipe es un servicio al que se puede acceder a través de CLARIN que se vincula con el procesamiento del lenguaje natural. Las tareas que pueden realizarse gracias a las herramientas que proporciona son muchas: tokenizar, etiquetar, lematizar. Su particularidad es que no precisa de un lenguaje concreto y que puede ser entrenada; lo único que necesita para poder operar son archivos que estén anotados con un formato CoNLL-U.
+          \n\nSe puede usar con el castellano, el catalán y el vasco."
+  
+  utter_analizar_etiquetar_textos_voyant_tools:
+  - text: "A través de CLARIN, también es posible llegar a Voyant Tools, un servicio de gran utilidad que posibilita leer y analizar textos digitales. Se pueden realizar muchas tareas: por ejemplo, se pueden analizar textos propios o que uno pueda encontrar, también es posible añadir funcionalidades a aquello que se esté analizando, desarrollar herramientas propias con código que puedan utilizarse desde el propio servicio, etc. 
+          \n\nSe puede usar con el castellano, el catalán, el vasco y el gallego."
+
+  utter_analizar_etiquetar_textos_text_tonsorium:
+  - text: "Text Tonsorium es una herramienta a la que es posible acceder a través de CLARIN. Esta permite diseñar flujos de trabajo, organizarse y ejecutar así distintas herramientas que ayuden a llegar a los resultados deseados. La particularidad que tiene frente a otros sistemas de gestión de flujos de trabajo es que este se centra sobremanera en los resultados, de modo que se puede ajustar muy bien a las expectativas del usuario. 
+          \n\nSe puede usar con el castellano, el catalán, el vasco y el gallego."
+
+  utter_analizar_etiquetar_textos_nlp_hub:
+  - text: "CLARIN da acceso al servicio NLP-HUB, que permite llevar a cabo tareas relacionadas con el procesamiento del lenguaje natural. Está formado por un conjunto de herramientas que pueden funcionar al mismo tiempo e identifica así una gran cantidad de información de un discurso, como nombres propios, cifras numéricas, etc. 
+          \n\nSe puede usar con el castellano."
+  
+  utter_analizar_etiquetar_textos_nametag:
+  - text: "Name-Tag es una herramienta a la que se puede llegar gracias a CLARIN que permite reconocer entidades nombradas. Su función principal es entonces la de analizar un texto localizando nombres y clasificándolos según las categorías que tiene predefinidas: nombres de personas, de lugares, etc.
+          \n\nSe puede usar con el castellano."
+  
+  utter_analizar_etiquetar_textos_websty:
+  - text: "A través de CLARIN, se puede acceder a la herramienta WebSty, una recurso web que permite llevar a cabo análisis estilométricos de un texto. Contiene herramientas que posibilitan poner el foco en cuestiones lingüísticas y, de esta manera, es posible centrarse en aspectos gramaticales, léxicos y temáticos. Una funcionalidad muy significativa que presenta es que funciona con distintos textos, lo que ayuda a realizar comparaciones que pueden ser útiles tanto para las Humanidades como para las Ciencias Sociales. 
+          \n\nSe puede usar con el castellano."
+
+  utter_analizar_etiquetar_textos_vocabulary_analyzer:
+  - text: "Vocabulary analyzer Web Service es un servicio web al que se puede acceder por CLARIN K. La acción que permite llevar a cabo es realizar cáculos de medidas lexicométricas, lo que no solo es útil para poder hacer investigaciones con esos resultados, sino que también muestra gráficamente los análisis que realiza. 
+          \n\nSe puede usar con el castellano, el catalán, el vasco y el gallego."
+  
+  utter_analizar_etiquetar_textos_ngram_statistics:
+  - text: "Ngram Statistics es una herramienta de gran utilidad a la que es posible acceder a través de CLARIN K. Su función principal es la de analizar textos de grandes dimensiones e incluso corpus en su totalidad identificando palabras, números, símbolos o incluso signos de puntuación recurrentes. Esto puede ser muy útil para, posteriormente, clasificar textos, analizar sentimientos, etc.
+          \n\nSe puede usar con el castellano, el catalán, el vasco y el gallego."
+
+  utter_analizar_etiquetar_textos_upf_pos_tagger:
+  - text: "UPF Freeling-based part-of-speech tagger es una herramienta cuyo acceso está disponible a través de CLARIN K y que permite llevar a cabo un análisis muy concreto: etiqueta partes o categorías del discurso, lo que en inglés se conoce como Part-of-Speech (POS). Su velocidad y la gran cantidad de datos que puede abarcar en poco tiempo son sus características más destacables.
+          \n\nSe puede usar con el castellano, el catalán y el gallego."
+  
+  utter_analizar_etiquetar_textos_analisis_relaciones_dependencias:
+  - text: "Análisis de relaciones de dependencias es una herramienta accesible a través de CLARIN K cuya función principal es la de analizar los vínculos que hay entre las palabras de un texto, posibilitando así un análisis de la dependencia de tales unidades. Solo funciona si lo que se introduce es un texto plano o si se utiliza el formato CoNLL. 
+          \n\nSe puede usar con el castellano."
+  
+  utter_analizar_etiquetar_textos_freeling_named_entity_recognition:
+  - text: "A través de CLARIN K, es posible acceder a Freeling Named Entity Recognition, una herramienta que ayuda a realizar un reconocimiento de entidades nombradas, por lo que permite analizar nombres de distinto tipo. Esto es de gran utilidad en la medida en que las categorías que pueden analizarse son de muy distinto tipo y, por lo tanto, esta llega a tener múltiples aplicaciones.
+          \n\nSe puede usar con el castellano, el catalán y el gallego."
+  
+  utter_analizar_etiquetar_textos_wsd_ixa:
+  - text: "WSD-IXA es una herramienta a la que se puede llegar por CLARIN K y cuya función principal es la de analizar un texto de modo que se desambigue el sentido de las palabras que lo componen. Se basa en algoritmos y en corpus concretos que contienen información semántica para funcionar adecuadamente y evitar que aparezcan errores. 
+          \n\nSe puede usar con el vasco."
+  
+  utter_analizar_etiquetar_textos_ixa_pipes:
+  - text: "CLARIN K ayuda a acceder fácilmente a Ixa pipes, un conjunto de herramientas que se basan en el procesamiento del lenguaje natural. En este sentido, las tareas que pueden realizarse son muchas: tokenizar, etiquetar categorías del discurso, lematizar, extraer opiniones, separar partes del texto, etc. 
+          \n\nSe puede usar con el castellano, el catalán, el vasco y el gallego."
+  
+  utter_analizar_etiquetar_textos_ixakat:
+  - text: "ixaKat es un servicio de gran utilidad al que se puede llegar a través de CLARIN K. Este se fundamenta principalmente en el procesamiento del lenguaje natural y, por consiguiente, ayuda a llevar a cabo, sobre todo, distintos análisis de carácter morfosintáctico y un etiquetado de lo procesado. Destaca, asimismo, por ser muy fácil de usar por cualquier usuario.
+          \n\nSe puede usar con el vasco."
+  
+  utter_analizar_etiquetar_textos_maltixa:
+  - text: "Maltixa es una herramienta a la que se puede acceder a través de CLARIN K y que destaca por ayudar a analizar sintácticamente y de un modo estadístico los textos. Al emplear este recurso, por lo tanto, pueden procesarse una gran cantidad de frases . Todas son analizadas de la misma manera y, después, se muestra un árbol que indica las dependencias entre las palabras. 
+          \n\nSe puede usar con el vasco."
+  
+  utter_analizar_etiquetar_textos_eustagger:
+  - text: "Eustagger es un etiquetador al que el usuario puede llegar gracias a CLARIN K. Se centra principalmente en la información morfosintáctica que pueda extraerse de un texto y sus resultados son muy precisos en tanto en cuanto tiene una gran cobertura. Esto se debe a que es capaz de ejecutar tres modalidades de análisis distintas: primero, se puede llevar a cabo un análisis estándar; segundo, es posible determinar que el procesamiento en cuestión se realice poniendo el foco de atención en las variantes lingüísticas; y, tercero, también tiene la posibilidad de analizar aquello que no esté registrado en su base de datos. Asimismo, también permite lematizar, etiquetar partes del discurso o incluso tokenizar. 
+          \n\nSe puede usar con el vasco."
+  
+  utter_analizar_etiquetar_textos_xuxen:
+  - text: "Xuxen es un corrector al que es posible acceder a través de CLARIN K. Su alcance llega a cuestiones ortográficas y gramaticales y su utilidad es tan grande que hasta llega a emplearse por programas y empresas ampliamente conocidas. 
+          \n\nSe puede usar con el vasco."
+  
+  utter_analizar_etiquetar_textos_analhitza:
+  - text: "Analhitza es una herramienta a la que se puede acceder gracias al centro CLARIN K. La función principal que tiene es la de procesar y analizar las oraciones de modo que detecta las categorías de distinto tipo que la integran; por ejemplo, pueden ser tanto categorías morfológicas o nombres propios como unidades formadas por más de una palabra.
+          \n\nSe puede usar con el castellano y el vasco."
+
+  utter_trabajar_metadatos:
+  - text: "Para trabajar con metadatos, CLARIN ofrece unas herramientas que pueden ser muy útiles para el usuario. Estas están relacionadas con la búsqueda de recursos a partir de estos o incluso con su conversión a un tipo de formato concreto. Para saber más al respecto, puedes preguntarme por cualquiera de estas dos herramientas: CMDI Explorar y Coala."
+
+  utter_trabajar_metadatos_cmdi_explorer:
+  - text: "CMDI Explorer es una herramienta de gran utilidad a la que es posible llegar a través de CLARIN. Su importancia reside en que se trata de un buscador que posibilita explorar metadatos que tengan un formato CMDI; de esta manera, procesa todos aquellos recursos que estén descritos de esa manera y se los muestra al usuario. 
+          \n\nNo está diseñado para ninguna lengua en concreto."
+  
+  utter_trabajar_metadatos_coala:
+  - text: "Coala es una herramienta a la que se llega a través de CLARIN que procesa los recursos y se centra en los metadatos. Su funcionamiento es el siguiente: si el usuario introduce un archivo con formato CSV, lo que se genera a continuación es un fichero con una descripción en formato CMDI. 
+          \n\nNo esta diseñado para ninguna lengua en concreto."
+  
+  utter_analizar_audio:
+  - text: "CLARIN ofrece una gran variedad de herramientas y servicios para analizar pistas de audio de distintas formas:
+          \n- SpeakDiar ayuda a identificar las señales de los hablantes.
+          \n- Voice Activity Detection permite diferenciar el sonido del ruido.
+          \n- WebMAUS General tiene la función de segmentar el audio de una determinada manera y hacer una transcripción concreta.
+          \n- WebMAUS Basic, por su parte, también proporciona una segmentación concreta, pero si el usuario proporciona unos archivos concretos.
+          \n- WebMINNI posibilita etiquetar fonéticamente. 
+          \n- Chunker segmenta pistas de audio muy largas.
+          \n- ChannelSeparator permite separar los canales que se detecten en un archivo multimedia.
+          \n- Formant Analysis tiene la función de analizar las formantes de las vocales. 
+          \n- Emu webApp, en cambio, permite etiquetar los datos de la voz de los hablantes.
+          \n\n¡Escríbeme el nombre de la herramienta sobre la que quieres saber más!"
+
+  utter_analizar_audio_speakdiar:
+  - text: "SpeakDiar es una herramienta a la que se puede llegar por medio de CLARIN y cuya función principal es la de analizar pistas de audio o vídeo, concretamente, identificando la señal de cada uno de los hablantes y diferenciándolas claramente. 
+          \n\nNo está diseñado para ninguna lengua en concreto."
+
+  utter_analizar_audio_voice_activity_detection:
+  - text: "A través de CLARIN, es posible acceder a Voice Activity Detection, que ayuda a detectar automáticamente, por una parte, lo que en una pista de audio puede considerarse sonido real y, por otra, lo que es ruido y solo entorpece y dificulta la escucha. 
+          \n\nNo está diseñado para ninguna lengua en concreto."
+  
+  utter_analizar_audio_webmaus_general:
+  - text: "CLARIN permite acceder a WebMAUS General, un servicio que lo que hace es segmentar fonéticamente las palabras basándose únicamente en la señal de audio y, asimismo, también proporciona una transcripción fonológica codificada con un formato SAM-PA. 
+          \n\nSe puede usar con el castellano, el catalán y el vasco."
+  
+  utter_analizar_audio_webmaus_basic:
+  - text: "WebMAUS Basic es un servicio web al que es posible llegar a través de CLARIN y que funciona de manera que, si un usuario proporciona una pista de audio con su correspondiente transcripción ortográfica en un segundo archivo, lo que se obtiene es un fichero con una segmentación por palabras y fonética.
+          \n\nSe puede usar con el castellano, el catalán y el vasco."
+  
+  utter_analizar_audio_webminni:
+  - text: "WebMINNI es un servicio al que se puede acceder a través de CLARIN y que completamente el uso que se puede hacer de WebMAUS, otro recurso sobre el cual también me puedes preguntar. La función de WebMINNI es la de etiquetar fonéticamente basándose exclusivamente en la señal que se percibe en la pista del audio, lo que se lleva a cabo sin precisar de un texto que la acompañe.
+          \n\nSe puede usar con el castellano y el catalán."
+
+  utter_analizar_audio_chunker:
+  - text: "Chunker es una herramienta a la que se puede acceder a través de CLARIN. Se fundamenta en llevar a cabo una segmentación de pistas de audio que sean excesivamente largas para que, en definitiva, estas puedan ser más fáciles de manejar y analizar, tanto manualmente como por otras herramientas o servicios. Chunker, además, complementa el uso de WebMAUS, un servicio sobre el que puedes preguntar también.
+          \n\nNo está diseñado para ninguna lengua en concreto."
+  
+  utter_analizar_audio_channelseparator:
+  - text: "ChannelSeparator es un servicio al que CLARIN proporciona acceso y cuya función es la de separar en canales las distintas señales que se identifican en una pista de audio. De esta manera, esta puede modificarse de tal forma que pueda escucharse solo a un hablante o que se quite todo el ruido para que se perciba mejor el contenido. 
+          \n\nNo está diseñado para ninguna lengua en concreto."
+  
+  utter_analizar_audio_formant_analysis:
+  - text: "CLARIN proporciona acceso a Formant Analysis, un servicio web que permite analizar las pistas de audio, concretamente, identificando y proporcionando información sobre los formantes de las vocales del habla. Este servicio requiere de conocimientos específicos en el ámbito de la lingüística, pero conduce a ver velozmente unos resultados generales y orientativos que pueden ser sumamente útiles para una investigación. 
+          \n\nSe puede usar con el castellano, el catalán y el vasco."
+  
+  utter_analizar_audio_emu_webapp:
+  - text: "EMU webApp es una aplicación web cuyo enlace puede encontrarse en CLARIN. Su función principal es la de analizar pistas de audio etiquetando los datos que vaya localizando en la voz de los hablantes, algo que hace completamente en línea y sin dificultades de ningún tipo. 
+          \n\nSe puede usar con el castellano, el catalán, el vasco y el gallego."
+  
+  utter_convertir_formatos_audio:
+  - text: "CLARIN ofrece al usuario una variedad de herramientas relacionadas con la conversión de formatos en relación al análisis de pistas de audio y del sonido. Estas son las siguientes: 
+          \n- G2P convierte un texto normal en una transcripción fonológica.
+          \n- AnnotConv convierte un archivo con un formato BPF en otro tipo de formatos.
+          \n- Chunk Preparation convierte un archivo con un formato común en un formato BPF.
+          \n\n¡Escríbeme el nombre de la herramienta sobre la que quieras saber más!"
+  
+  utter_convertir_formatos_audio_g2p:
+  - text: "G2P es una herramienta a la que se puede acceder a través de CLARIN y cuya funcionalidad se relaciona con el análisis de pistas de audio. Lo que hace concretamente es convertir un texto normal con una ortografía correcta en una transcripción fonológica de pronunciación estándar.
+          \nSe puede usar con el castellano, el catalán y el vasco."
+  
+  utter_convertir_formatos_audio_annotconv:
+  - text: "AnnotConv es un servicio que se relaciona con el análisis de pistas de audio y al que se puede llegar por medio de CLARIN. Su función es la de cambiar un formato a otro, concretamente, toma un archivo cuyo tipo de anotación sea BAS Partitur Format (BPF), que es el que reconocen la mayor parte de herramientas de la infraestructura relacionadas con el sonido, y lo convierte a otro tipo de formatos no tan específicos. 
+          \nNo está diseñado para ninguna lengua en concreto."
+  
+  utter_convertir_formatos_audio_chunk_preparation:
+  - text: "CLARIN proporciona acceso al servicio Chunk Preparation, cuya función está relacionada con el análisis de pistas de audio. Lo que hace es convertir un formato de anotación común que contenga datos muy específicos en el formato BAS Partitur Format (BPF), el más común de la infraestructura cuando se trata del análisis del sonido. 
+          \nSe puede usar con el castellano, el catalán y el vasco."
+  
+  utter_mejorar_calidad_manejo:
+  - text: "Para mejorar el manejo o calidad de los archivos, hay una serie de herramientas que, concretamente, puedes encontrar en la infraestructura de CLARIN. Estas son las siguientes: 
+          \n- AudioEnhance permite mejorar la calidad de una pista de audio.
+          \n- TextEnhance convierte un archivo en texto plano.
+          \n- TextAlign permite igualar pares de secuencias.
+          \n\n¡Escríbeme el nombre de la herramienta sobre la que quieres saber más!"
+  
+  utter_mejorar_calidad_manejo_audioenhance:
+  - text: "AudioEnhance es una herramienta sumamente útil que puedes encontrar en CLARIN. Su función está relacionada con las pistas de audio y, concretamente, es la de cambiar la señal del sonido con el propósito de mejorarlo. Esto permite que dicho archivo pueda emplearse en otros recursos.
+          \nNo está diseñado para ninguna lengua en concreto."
+
+  utter_mejorar_calidad_manejo_textenhance:
+  - text: "TextEnhance es una herramienta a la que se puede acceder gracias a CLARIN. Esta se fundamenta en que puede convertir un texto que esté en cualquier formato en uno plano que pueda utilizarse en cualquier herramienta. Principalmente, se puede emplear para luego poder ejecutar los servicios de BAS WebServices, donde se puede acceder a todas las herramientas de la infraestructura en cuestión relacionadas con el sonido.
+          \nNo está diseñado para ninguna lengua en concreto."
+  
+  utter_mejorar_calidad_manejo_textalign:
+  - text: "TextAlign es un servicio al que se accede a través de CLARIN y cuya función es la de igualar pares de secuencias, minimizando la distancia y las diferencias entre ellas. Así pues, es posible trabajar con oraciones y su transcripción correspondiente o con secuencias de palabras que tengan diferencias, pero deban constar como equivalentes. 
+          \nNo está diseñado para ninguna lengua en concreto."
+  
+  utter_sistemas_gestion_contenido:
+  - text: "Los sistemas de gestión de contenido suponen una gran ayuda para organizar la información o los objetos digitales relacionados con la investigación.
+          \n\nAl que se puede acceder desde las infraestructuras europeas para las Humanidades Digitales es a WikiSpeech, concretamente, desde CLARIN. Este sistema es una aplicación web fácilmente accesible que puede contener y que ayuda administrar las bases de datos que se basen en cuestiones derivadas del análisis del sonido. 
+          \n\nNo está diseñado para ninguna lengua en concreto."
+  
+  utter_servicios_varios_dariah:
+  - text: "DARIAH dispone de múltiples servicios variados que responden a numerosas funciones. Puede acudirse a ellos cuando se busca instrucciones de buenas prácticas, editar textos de manera conjunta o incluso buscar información sobre colecciones para la investigación en Humanidades Digitales. Los servicios en cuestión son estos: 
+          \n- DARIAH-DE Repository es el repositorio principal de la infraestructura.
+          \n Vocabs Services, en cambio, ayuda a crear y conocer vocabularios controlados.
+          \n-  Standardization Survival Kit (SSK) es una iniciativa que ayuda a conocer las buenas prácticas dentro de las Humanidades Digitales. 
+          \n- DARIAH docs es un servicio para editar documentos en línea. 
+          \n- Isidore es un motor de búsqueda para localizar recursos de las Humanidades y las Ciencias Sociales. 
+          \n- Collection Registry es una aplicación web para localizar información de distintos grupos de investigación.
+          \n- DARIAH WIKI, por su parte, es un espacio para compartir y almacenar información sobre proyectos de investigación.
+          \n- CodiMD, por su parte, es un servicio para crear textos en línea colaborativamente.
+          \n- Generic Search es un servicio para localizar datos que estén incluidos en DARIAH. 
+          \n- TaDiRAH es una taxonomía sobre las Humanidades Digitales que orienta al investigador. 
+          \n- DARIAH AAI permite que los investigadores tengan un acceso a todos los servicios de la infraestructura. 
+          \n\n¡Escríbeme el nombre del servicio sobre el que quieres saber más!"
+
+  utter_servicios_varios_dariah_dariah_repository:
+  - text: "DARIAH-DE Repository es un repositorio que constituye una parte fundamental de DARIAH-DE que contiene una gran cantidad de datos de investigación de este. Una de las principales funciones que tiene es la de conservar servicios y aplicaciones que se ponen a disposición del usuario, facilitando así su accesibilidad. Se garantiza entonces que los datos que se incorporan a dicho repositorio se preserven, se describan mediante unos metadatos y se puedan localizar de forma sencilla. 
+          \n\nNo está diseñado para ninguna lengua en concreto, pero posiblemente se encuentren límites a la hora de emplearlo en la medida en que España no es miembro de la infraestructura. "
+
+  utter_servicios_varios_dariah_vocabs_services:
+  - text: "Vocabs services es un conjunto de servicios y herramientas al que se puede acceder a través de DARIAH y cuya función principal está muy vinculada a los vocabularios controlados que posibilitan la interoperabilidad de los recursos. Concretamente, lo que ayudan a hacer es a crear, mantener, gestionar y publicar vocabularios de este tipo y también taxonomías. 
+          \n\nNo está diseñado para ninguna lengua en concreto, pero posiblemente se encuentren límites a la hora de emplearlo en la medida en que España no es miembro de la infraestructura."
+
+  utter_servicios_varios_dariah_standardization_survival_kit:
+  - text: "Standardization Survival Kit (SSK) es un servicio al que se puede llegar por medio de DARIAH y que ayuda a que los investigadores puedan conocer y entender mejor las buenas prácticas y los estándares más comunes dentro del marco de las Humanidades Digitales. Además, no solo da acceso a esta información, sino que también da la posibilidad de publicar nuevos ejemplos o escenarios que demuestren la materialización de todo ello, lo que, en definitiva, también conduce a ayudar a otros con objetivos similares. 
+          \n\nNo está diseñado para ninguna lengua en concreto, pero posiblemente se encuentren límites a la hora de emplearlo en la medida en que España no es miembro de la infraestructura."
+
+  utter_servicios_varios_dariah_dariah_docs:
+  - text: "DARIAH docs es un servicio de gran utilidad que permite crear documentos y editarlos a la manera de otras plataformas muy conocidas. Así pues, posibilita que un investigador pueda hacerlo directamente en la nube y que se vaya guardando su progreso de forma automática; además, también facilita la colaboración en la medida en que muchos pueden trabajar al mismo tiempo en un mismo archivo. Para acceder, es necesario ponerse en contacto con la plataforma. Además, se recomienda hacer copias de seguridad como respuesta a los posibles riesgos que puedan surgir. 
+          \n\nNo está diseñado para ninguna lengua en concreto, pero posiblemente se encuentren límites a la hora de emplearlo en la medida en que España no es miembro de la infraestructura."
+
+  utter_servicios_varios_dariah_isidore:
+  - text: "Isidore es un servicio que ofrece DARIAH y que se considera un motor de búsqueda que ayuda a localizar rápidamente una gran variedad de recursos de acceso abierto para la investigación en Humanidades y Ciencias Sociales, pues puede acceder hasta a 5 millones. Es sumamente útil tanto para profesores e investigadores como para estudiantes. 
+          \n\nNo está diseñado para ninguna lengua en concreto, pero posiblemente se encuentren límites a la hora de emplearlo en la medida en que España no es miembro de la infraestructura."
+
+  utter_servicios_varios_dariah_collection_registry:
+  - text: "DARIAH da acceso a lo que se conoce como Collection Registry, una aplicación web que permite acceder a la información de numerosos grupos de investigación que centran su trabajo en las Humanidades y las Ciencias Sociales. Es decir, ayuda a que el usuario pueda acceder de manera rápida y dinámica a datos generales sobre estudios que ya se han realizado u objetos de estudio que están siendo abordados en la actualidad. 
+          \n\nNo está diseñado para ninguna lengua en concreto, pero se encuentren límites a la hora de emplearlo en la medida en que España no es miembro de la infraestructura."
+
+  utter_servicios_varios_dariah_dariah_wiki:
+  - text: "DARIAH WIKI es otro servicio relevante que puede tener una cierta utilidad para el investigador. Se trata de una plataforma que contiene y conserva información sobre los proyectos de investigación que están vinculados a la infraestructura en su conjunto. Esto también supone un punto importante que merece ser conocido por los grupos de investigación en tanto en cuanto se les permite crear un espacio en el servicio que lleve a aumentar su impacto. Esto es algo que se puede solicitar poniéndose en contacto con la plataforma en cuestión.
+          \n\nNo está diseñado para ninguna lengua en concreto, pero se encuentren límites a la hora de emplearlo en la medida en que España no es miembro de la infraestructura."
+
+  utter_servicios_varios_dariah_codimd:
+  - text: "DARIAH ofrece la posibilidad de acceder a CodiMD, un servicio que permite crear y editar textos en línea, además de confeccionarlos colaborativamente. Este es parecido al que ofrecen otras conocidas plataformas y puede ser de gran utilidad para los investigadores que busquen trabajar con otros para realizar un estudio o que se garantice que lo que hacen se va guardando automáticamente. 
+          \n\nNo está diseñado para ninguna lengua en concreto, pero se encuentren límites a la hora de emplearlo en la medida en que España no es miembro de la infraestructura."
+
+  utter_servicios_varios_dariah_generic_search:
+  - text: "Generic Search es un servicio al que se puede acceder a través de DARIAH y que es de gran utilidad en la medida en que permite localizar datos de distinto tipo, desde recursos varios hasta colecciones digitales, que estén alojados en dicha infraestructura. Su particularidad no reside únicamente en esta posibilidad de búsqueda, sino que ayuda sobremanera al investigador en la medida en que localiza la información sin fijarse en el esquema de metadatos a partir del cual haya sido descrito. 
+          \n\nNo está diseñado para ninguna lengua en concreto, pero se encuentren límites a la hora de emplearlo en la medida en que España no es miembro de la infraestructura."
+
+  utter_servicios_varios_dariah_tadirah:
+  - text: "Taxonomy of Digital Research Activities in the Humanities (TaDiRAH) es una taxonomía a la que es posible acceder a través de DARIAH y que orienta a los investigadores a la hora de conocer más información sobre las Humanidades Digitales. Este servicio, por lo tanto, no solo permite saber en qué consisten de manera general, sino ver de una manera muy detallada cuáles son las tareas que se pueden llevar a cabo en este campo o incluso qué herramientas hay a disposición del usuario. 
+          \n\nNo está diseñado para ninguna lengua en concreto."
+  
+  utter_servicios_varios_dariah_dariah_aai:
+  - text: "DARIAH AAI es un servicio que ofrece la infraestructura para poder ser usuario de los distintos recursos que se ofrecen y acceder a ellos con un único inicio de sesión unificado. De este modo, cuando el investigador accede con sus datos, tiene la posibilidad de acceder a todo lo que se ofrece y navegar por los distintos servicios sin necesidad de introducir su información en más ocasiones.
+          \n\nNo está diseñado para ninguna lengua en concreto, pero se encuentren límites a la hora de emplearlo en la medida en que España no es miembro de la infraestructura."
+
+  utter_formacion_dariah:
+  - text: "En DARIAH, hay una gran variedad de recursos formativos que pueden ayudar al investigador a aprender mucho sobre las Humanidades Digitales. Son estos:
+          \n- DARIAH-Campus es un espacio formativo con muchos recursos de aprendizaje. 
+          \n- PARTHENOS fomenta el aprendizaje  para los que desconocen lo que son las Humanidades Digitales
+          \n- Digital Humanities Course Registry muestra la oferta formativa en que hay en los países europeos.
+          \n- #dariahTeach promueve los recursos y materiales didácticos de alta calidad. 
+          \n\n¡Escríbeme el nombre del servicio sobre el que quieres saber más!"
+
+  utter_formacion_dariah_dariah_campus:
+  - text: "DARIAH-Campus es un espacio de enseñanza y aprendizaje orientado a todo aquel que quiera aprender más sobre las Humanidades Digitales y todo lo que estas tienen que ofrecer. Lo que aloja son recursos formativos de la infraestructura en su conjunto y de sus distintos miembros que tienen una gran calidad y son de acceso abierto. 
+          \n\nNo está diseñado para ninguna lengua en concreto."
+
+  utter_formacion_dariah_parthenos:
+  - text: "PARTHENOS es una iniciativa orientada a la formación que se ofrece desde DARIAH y que consiste en proporcionar a los usuarios recursos de aprendizaje que pueden ser sumamente útiles para los investigadores en Humanidades Digitales en la medida en que, por ejemplo, contienen información básica e introductoria para entender en qué consisten o qué es lo que pueden aportar. 
+          \n\nNo está diseñado para ninguna lengua en concreto. "
+
+  utter_formacion_dariah_dariahteach:
+  - text: "#dariahTeach es una iniciativa impulsada por DARIAH a través de la cual se pretende desarrollar y promover recursos formativos y materiales didácticos sobre las Humanidades Digitales que sean de acceso abierto de muy alta calidad. Asimismo, se pretende que todos los miembros de la infraestructura formen parte activa del proyecto y, de esta manera, que se refuercen los lazos entre ellos y la comunicación en un plano académico.
+          \n\nNo está diseñado para ninguna lengua en concreto. "
+
+  utter_herramientas_dariah:
+  - text: "DARIAH ofrece al usuario una gran variedad de herramientas de distinto tipo que merece la pena conocer. Son las siguientes:
+          \n- DARIAH-DE Topics Explorer ayuda a localizar los temas de un texto.
+          \n- MEI Score Editor permite editar la notación musical y visualizar la información en cuestión.
+          \n- ConedaKOR es un sistema de bases de datos orientado a la investigación en Humanidades y Ciencias Sociales. 
+          \n- TextGrid, por su parte, es un servicio con el que realizar ediciones digitales profesionales.
+          \n- DARIAH-DE Geo-Browser permite llevar a cabo estudios relacionados con aspectos espaciotemporales. 
+          \n\n¡Escríbeme el nombre de la herramienta sobre la que quieres saber más!"
+  
+  utter_herramientas_dariah_topics_explorer:
+  - text: "DARIAH-DE Topics Explorer es una herramienta de gran utilidad para los investigadores en la medida en que permite analizar los textos localizando los temas de los mismos y que puede emplearse con corpus de grandes dimensiones. Se basa en datos estadísticos y en las relaciones semánticas que se localizan en el propio documento que se analice, por lo que cabe destacar que no está conectada a diccionarios externos. Esta orientado principalmente a principiantes que quieran empezar a observar cómo se realiza esta tarea, pero también permite llegar a resultados fundamentados que pueden ser útiles para una investigación fundamentada.
+          \n\nSe puede usar con el castellano, el catalán, el vasco y el gallego."
+  
+  utter_herramientas_dariah_mei_score_editor:
+  - text: "MEI Score Editor es una herramienta que ofrece DARIAH y que tiene una gran utilidad si lo que se quiere realizar es un análisis musical, pues lo que permite hacer es editar la notación musical que se puede hacer de una pista de audio, una partitura o un archivo de otro tipo. Dicha notación, sin embargo, debe estar codificado en formato CWN. Los beneficios para el investigador en cuestión son que permite la lectura ágil de la información, la visualización en general y la edición. 
+          \n\nSe puede usar con el castellano, el catalán, el vasco y el gallego."
+  
+  utter_herramientas_dariah_conedakor:
+  - text: "Un sistema de bases de datos muy relevante al que se puede acceder desde DARIAH es ConedaKOR. En este lo que se almacena y se administra son colecciones acádemicas de objetos digitales que tengan relación con las Humanidades y las Ciencias Sociales. Todo lo que se integra en dicha herramienta puede ser organizado de acuerdo con relaciones semánticas e incluso a partir de un sistema de ontologías que facilitan la organización de la información.
+          \n\nNo esta diseñado para ninguna lengua en concreto."
+  
+  utter_herramientas_dariah_textgrid:
+  - text: "TextGrid es una conocida herramienta a la que es posible llegar por medio de DARIAH y que lo que proporciona al usuario es un entorno virtual para la investigación y la realización profesional de ediciones digitales. Tiene tres secciones distintas que merece la pena conocer: la primera es una que permite confeccionar la edición en cuestión, la segunda es un repositorio en el que almacenar aquello que se cree y la tercera una comunidad que interconecta a los usuarios y facilita la comunicación entre ellas.
+          \n\nNo está diseñado para ninguna lengua en concreto."
+
+  utter_herramientas_dariah_geo_browser:
+  - text: "DARIAH-DE Geo-Browser es una herramienta que ayuda a llevar a cabo investigaciones que estén relacionadas con cuestiones geográficas y temporales. Por consiguiente, permite llevar a cabo análisis de datos que estén relacionados de alguna manera con el espacio y el tiempo. Su particularidad es que muestra los resultados en mapas, lo que puede ser muy útil para el investigador y los estudios que lleve a cabo.
+          \n\nNo está diseñado para ninguna lengua en concreto. "
+
+  utter_transcribir_audio_texto:
+  - text: "Para realizar transcripciones, hay una serie de herramientas que ofrece CLARIN y que pueden ser muy útiles para el investigador:
+          \n- Pho2Syl transcribe separando las palabras por sílabas.
+          \n- Subtitle ayuda a crear subtítulos de manera automática. 
+          \n- Anonymizer permite ocultar palabras en un archivo multimedia y en la anotación que le acompañe. 
+          \n\n¡Escríbeme el nombre de la herramienta sobre la que quieres saber más!"
+  
+  utter_transcribir_audio_texto_phosyl:
+  - text: "Una de las herramientas que ofrece CLARIN para llevar a cabo transcripciones es Pho2Syl, cuya particularidad es que separa por sílabas una transcripción. Concretamente, funciona de manera que se proporciona tal transcripción, que puede tanto fonética como fonológica, y lo que se devuelve al usuario es la separación en dichas unidades. 
+          \n\nSe puede usar con el castellano, el catalán y el vasco."
+
+  utter_transcribir_audio_texto_subtitle:
+  - text: "Subtitle es una herramienta a la que se puede acceder a través de CLARIN cuya función principal es que procesa ficheros multimedia de forma que devuelve un archivo de texto con la subtitulación correspondiente de lo que se escucha. Dicho archivo resultante, además, puede estar en varios formatos.
+          \n\nSe puede usar con el castellano, el catalán, el vasco y el gallego."
+
+  utter_transcribir_audio_texto_anonymizer: 
+  - text: "A través de CLARIN, es posible llegar a la herramienta Anonymizer. Lo que hace esta es procesar una pista de audio junto con una anotación al respecto que esté en formato BAS Partitur Format (BPF), que es la que reconocen las herramientas de la infraestructura relacionadas con el análisis del sonido; de tal modo que permite ocultar alguna palabra concreta tanto en la lengua oral como en la parte escrita. Esto suele ser usado para ocultar los nombres de los hablantes en una conversación. por eejemplo.
+          \n\nSe puede usar con el castellano, el catalán, el vasco y el gallego."
+  
+  utter_analizar_poesia:
+  - text: "Para analizar diferentes cuestiones de textos poéticos, CLARIN K ofrece una serie de herramientas al usuario:
+          \n- Averell normaliza los textos en un único formato.
+          \n- Jollyjumper permite detectar encabalgamientos en un poema.
+          \n- Rantanplan mide los versos y clasifica estrofas.
+          \n- PoetryLab funciona a modo de pequeño laboratorio para analizar múltiples aspectos de un poema. 
+          \n\n¡Escríbeme el nombre de la herramienta sobre la que quieres saber más!"
+  
+  utter_analizar_poesia_averell:
+  - text: "Averell es una biblioteca constituida con Python a la que se puede acceder a través de CLARIN K y que permite normalizar poesía de distintas lenguas de diez repositorios diferentes, por lo que convierte cualquier formato, que puede contener anotaciones de distinto tipo (TEI, etc.), en una representación estándar: JSON. 
+          \n\nSe puede usar con el castellano."
+  
+  utter_analizar_poesia_jollyjumper:
+  - text: "Jollyjumper es una biblioteca de Python a la que se puede llegar gracias a CLARIN K que ayuda a detectar los encabalgamientos en los versos de un poema. Tiene una gran utilidad a la hora de analizar no solo la constitución formal de un texto, sino también su sentido semántico. 
+          \n\nSe puede usar con el castellano."
+  
+  utter_analizar_poesia_rantanplan:
+  - text: "A través de CLARIN K, es posible acceder a la biblioteca de Python Rantanplan. Tiene dos funciones principales: la primera es la de medir el ritmo de un verso, lo que se conoce como 'escansión'. La segunda, en cambio, tiene que ver con una clasificación que se hace de las estrofas, pues tiene hasta 45 tipos registrados. En suma, se trata de un servicio sumamente útil para analizar un poema. 
+          \n\nSe puede usar con el castellano."
+  
+  utter_analizar_poesia_poetrylab:
+  - text: "PoetryLab, al que se puede llegar por medio de CLARIN K, es una suerte de aplicación web formada por un conjunto de herramientas que permiten analizar distintos aspectos de un poema; por ejemplo, ayuda a determinar cuántas sílabas hay en un verso rápidamente, los encabalgamientos que pueden encontrarse, las rimas que articulan el texto, el ritmo que tiene este o las entidades que se nombran. 
+          \n\nSe puede usar con el castellano."
+  
+  utter_analizar_dialectos:
+  - text: "Para analizar aspectos dialectológicos, CLARIN K permite que el usuario acceda a tres herramientas:
+          \n- PDMapping ayuda a analizar percepciones en torno a los dialectos.
+          \n- FOLErPa también permite llevar a cabo estudios sobre las percepciones que se tienen y a trabajar con cuestionarios.
+          \n- BASYQUE posibilita el estudio de los dialectos del vasco y su variación sintáctica.
+          \n\n¡Escríbeme el nombre de la herramienta sobre la que quieres saber más!"
+
+  utter_analizar_dialectos_pdmapping:
+  - text: "PDMapping es una herramienta a la que es posible acceder gracias a CLARIN K. Puede generar un gran interés para los que quieran analizar cuestiones dialectológicas en la medida en que su función es la de abordar las percepciones que se tienen en torno a tales dialectos. Sirve entonces para tener un  registro de qué es lo que se piensa al respecto y ayuda a analizar esta información con facilidad. 
+          \n\nSe puede usar con el gallego."
+
+  utter_analizar_dialectos_folerpa:
+  - text: "Ferramenta On-Line de ExpeRimentación PerceptivA (FOLErPa) es una herramienta a la que CLARIN K da acceso y que permite a llevar a cabo investigaciones en torno a las percepciones que se tienen de cuestiones lingüísticas. Así pues, da la posibilidad de crear un cuestionario perceptivo que, después, también ayuda a difundir. Asimismo, posibilita que los resultados se almacenen y se administren para analizarlos posteriormente, algo para lo que también proporciona un módulo en el que realizar dicha tarea.
+          \n\nSe puede usar con el castellano, el catalán, el vasco y el gallego."
+
+  utter_analizar_dialectos_basyque:
+  - text: "BASYQUE es una aplicación web a la que CLARIN K da acceso y cuya función principal es la de ayudar al investigador a analizar, entre los dialectos del vasco, la variación sintáctica. La información se obtiene principalmente a partir de cuestionarios que se van realizando y lo que permite hacer la herramienta son tareas relacionadas con el almacenamiento y la gestión de los datos, así como su posterior búsqueda. 
+          \n\nSe puede usar con el vasco."
+
+  utter_conocer_corpus:
+  - text: "CLARIN K da acceso a distintos corpus sobre los que también te puedo informar:
+          \n- RILG es un corpus del gallego con datos textuales y léxicos.
+          \n- ETSC es uno del vasco orientado al ámbito científico.
+          \n- Universal Dependencies vinculado al vasco es un proyecto en el que se crean numerosas aniotaciones que después pueden reutilizarse.
+          \n- EPEC-KORREF es un corpus del euskera basado en las correferencias.
+          \n- EPEC-EuSemcor es un corpus vinculado a la WordNet vasca.
+          \n- ZT corpusa contiene etiquetas morfosintácticas y está orientado al plano académico.
+          \n- EPEC-DEP también tiene información morfosintáctica y, a su vez, semántica. 
+          \n\n¡Escríbeme el nombre del corpus sobre el que quieras saber más!"
+
+  utter_conocer_corpus_rilg: 
+  - text: "Recursos Integrados da Lingua Galega (RILG) es un corpus al que se puede acceder a través de CLARIN K. Este contiene información léxica y textual del gallego que ha sido investigada y generada por proyectos de distinto tipo ligados al Instituto de la Lengua Gallega (ILG), por lo que sirve, a su vez, para gestionar y difundir todos estos datos.
+          \n\nSe puede usar con el gallego."
+
+  utter_conocer_corpus_etsc:
+  - text: "Euskarazko Testu Sinplifikatuen Corpusa (ETSC) es un corpus al que CLARIN K facilita el acceso. Este se compone de una gran variedad de textos del vasco con múltiples frases relacionadas con el ámbito científico. Dichas oraciones aparecen claramente clasificadas y eso permite que tengan una mayor utilidad para el investigador.
+          \n\nSe puede usar con el vasco."
+
+  utter_conocer_corpus_ud_treebank:
+  - text: "Desde CLARIN K, es posible llegar a una iniciativa relacionada con Universal Dependencies (UD) vinculado al vasco. UD es un proyecto de grandes dimensiones a través del cual se busca generar información de las lenguas creando anotaciones de carácter gramatical que después pueda utilizarse para la enseñanza, la creación de herramientas digitales o la investigación en torno a las lenguas. La iniciativa en cuestión consiste, pues, en llevar a cabo tal tarea con el idioma mencionado.
+          \n\nSe puede usar con el vasco."
+
+  utter_conocer_corpus_epec_korref:
+  - text: "EPEC-KORREF es un corpus del euskera que se centra en las correferencias y al que se puede acceder a través de CLARIN K. Este se compone de diferentes documentos en vasco que contienen anotaciones realizadas manualmente, las cuales posibilitan que haya tales correferencias. 
+          \n\nSe puede usar con el vasco."
+
+  utter_conocer_corpus_epec_eusemcor:
+  - text: "EPEC-EuSemcor es un corpus al que se puede acceder por medio de CLARIN K. Está etiquetado manualmente colaborando de forma estrecha con la WordNet vasca, de modo que tiene muy buena información lingüística; por ejemplo, este ayuda a distinguir de manera clara los distintos sentidos que pueden tener las palabras.
+          \n\nSe puede usar con el vasco."
+
+  utter_conocer_corpus_zt_corpusa:
+  - text: "CLARIN K permite acceder a ZT corpusa, un corpus para el vasco que está etiquetado en función de sus características morfológicas y sintácticas. Contiene textos del plano académico y de la investigación, por lo que se diseñó con la intención de que ayudara a fomentar un lenguaje técnico propio de un registro culto. Asimismo, cabe destacar que se compone de una parte que ha sido anotada manualmente y otra que ha sido procesada de forma automática. 
+          \n\nSe puede usar con el vasco."
+
+  utter_conocer_corpus_epec_dep:
+  - text: "EPEC-DEP es un corpus para el vasco al que se puede acceder a través de CLARIN K. Este está etiquetado manualmente tanto en un plano morfosintáctico como semántico siguiendo una teoría lingüística concreta, como es la de la gramática de la dependencia. El propósito a partir del cual ha sido confeccionado es que pueda servir para desarrollar herramientas orientadas al procesamiento del lenguaje natural.
+          \nSe puede usar con el vasco."
+
+  utter_conocer_recursos_lexicos:
+  - text: "Hay algunos recursos léxicos a los que se puede acceder a través de CLARIN K que merece la pena conocer:
+          \n- El Diccionario de pronuncia da lingua galega recoge el gallego estándar y su pronunciación.
+          \n- Konbitzul permite abordar el castellano y el euskera conjuntamente.
+          \n- EusWN es la WordNet vasca. 
+          \n- e-ROLda es un recurso léxico con el que se pueden analizar los predicados en vasco.
+          \n\n¡Escríbeme el nombre del recurso sobre el que quieres saber más!"
+
+  utter_conocer_recursos_lexicos_diccionario_gallego:
+  - text: "El Diccionario de pronuncia da lingua galega es un recurso léxico al que se puede acceder gracias a CLARIN K. Este tiene la particularidad de que se centra en el gallego estándar y su pronunciación en los registros cultos. Además, este tiene también un gran registro de nombres propios y proporciona al usuario un buscador que incluso posibilita realizar consultas de transcripciones fonética. 
+          \n\nSe puede usar con el gallego."
+
+  utter_conocer_recursos_lexicos_konbitzul:
+  - text: "Konzbitzul es una base de datos a la que se puede acceder gracias a CLARIN K y cuya particularidad es que está diseñada para poder abordar el español y el vasco conjuntamente. En sus registros, tiene información sobre expresiones complejas y sus traducciones directas en la otra lengua, por lo que es muy útil para diseñar o mejorar herramientas que estén orientadas al procesamiento del lenguaje natural y a la traducción automática. 
+          \n\nSe puede usar con el castellano y el vasco."
+
+  utter_conocer_recursos_lexicos_euswn:
+  - text: "EusWN es un recurso léxico al que puede llegarse a través de CLARIN K. Se trata de la WordNet vasca, que sigue la línea de la EuroWordNet, y lleva a que las palabras registradas en vasco estén conectadas con las documentadas en inglés. Esto ha sido revisado manualmente poniéndose el foco de atención tanto en las palabras como en los conceptos, de modo que se proporciona información lingüística de calidad sobre sinónimos, definiciones, etc.
+          \n\nSe puede usar con el vasco."
+
+  utter_conocer_recursos_lexicos_erolda:
+  - text: "A la herramienta e-ROLda se puede acceder a través de CLARIN K y esta puede entenderse como un recurso léxico que ayuda a analizar predicados en vasco. Así pues, permite identificar el verbo en las oraciones, su sentido o incluso el papel semántico de los complementos que le acompañan. Además, muestra ejemplos de uso que pueden ser muy ilustrativos para el investigador.
+          \n\nSe puede usar con el vasco. "
+
+  utter_conocer_modelos_ling:
+  - text: "A través de CLARIN K, es posible acceder a unos modelos lingüísticos a los que es posible acudir, por ejemplo, cuando se quiere crear herramientas para el Procesamiento del Lenguaje Natural. Estos son los siguientes:
+          \n- EDGK muestra dependencias entre las palabras y establece jerarquías.
+          \n- BERTeus es un modelo aplicado al vasco cuya gran mayoría de datos viene de Wikipedia.
+          \n\n¡Escríbeme el nombre del modelo sobre el que quieres saber más!"
+
+  utter_conocer_modelos_ling_edgk:
+  - text: "EDGK es un modelo lingüístico al que se puede acceder a través de CLARIN K. Se trata concretamente de una gramática que muestra dependencias y está basada en reglas de distinto tipo. Lo que permite llevar a cabo es identificar un nivel de dependencia distinto a cada una de las palabras de una frase, estableciendo así jerarquías no solo a nivel gramatical, sino también semántico. Por último, muestra visualmente los resultados del análisis.
+          \n\nSe puede usar con el vasco."
+
+  utter_conocer_modelos_ling_berteus:
+  - text: "BERTeus es un modelo lingüístico al que CLARIN K facilita el acceso. Se trata del modelo BERT aplicado al vasco, por lo que lo que contiene es una información que ha sido registrada y entrada en esta lengua para facilitar el posterior procesamiento del lenguaje natural. Tiene una gran cantidad de datos lingüísticos, cuya gran mayoría proviene de la plataforma web Wikipedia.
+          \n\nSe puede usar con el vasco."
+
+  utter_herramientas_geograficas:
+  - text: "Las herramientas que permiten llevar a cabo un análisis que esté relacionado con aspectos geográficos en el área de las Humanidades Digitales son muchas y pueden llegar a ser sumamente útiles para los investigadores.
+          \n\nAquella que merece destacarse para los investigadores que quieran realizar investigaciones en torno a las lenguas de España es Cartografia dos apelidos de Galicia, que se encuentra en CLARIN Kpermite estudiar los apellidos de Galicia. El usuario puede ver en un mapa la distribución y la frecuencia de los nombres por zonas.  
+          \n\nSe puede usar con el gallego."
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+entities:
+  - clarin
+  - dariah
+  - clarin_k
+  - udpipe
+  - voyant_tools
+  - text_tonsorium
+  - nlp_hub
+  - nametag
+  - websty
+  - vocabulary_analyzer
+  - ngram_statistics
+  - upf_pos_tagger
+  - analisis_relaciones_dependencias
+  - freeling_named_entity_recognition
+  - wsd_ixa 
+  - ixa_pipes
+  - ixakat
+  - maltixa
+  - eustagger
+  - xuxen
+  - analhitza
+  - cmdi_explorer
+  - coala
+  - speakdiar
+  - voice_activity_detection
+  - webmaus_general
+  - webmaus_basic
+  - webminni
+  - chunker
+  - channelseparator
+  - formant_analysis
+  - emu_webapp
+  - g2p
+  - annotconv
+  - chunk_preparation
+  - audioenhance
+  - textenhance
+  - textalign
+  - dariah_repository
+  - vocabs_services
+  - standardization_survival_kit
+  - dariah_docs
+  - isidore
+  - collection_registry
+  - dariah_wiki 
+  - codimd
+  - generic_search
+  - tadirah
+  - dariah_aai
+  - dariah_campus
+  - parthenos
+  - course_registry
+  - dariahteach
+  - topics_explorer
+  - mei_score_editor
+  - conedakor
+  - textgrid
+  - geo_browser
+  - phosyl
+  - subtitle
+  - averell
+  - jollyjumper
+  - rantanplan
+  - poetrylab
+  - pdmapping
+  - folerpa
+  - basyque
+  - rilg
+  - etsc
+  - ud_treebank
+  - epec_korref
+  - epec_eusemcor
+  - zt_corpusa
+  - epec_dep
+  - diccionario_gallego
+  - konbitzul
+  - euswn
+  - erolda
+  - edgk
+  - berteus
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

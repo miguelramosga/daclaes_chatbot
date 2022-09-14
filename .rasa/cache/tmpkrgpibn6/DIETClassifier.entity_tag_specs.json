@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-infraestructura",
+      "2": "I-infraestructura",
+      "3": "L-infraestructura",
+      "4": "U-infraestructura",
+      "5": "B-país",
+      "6": "I-país",
+      "7": "L-país",
+      "8": "U-país",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-infraestructura": 1,
+      "I-infraestructura": 2,
+      "L-infraestructura": 3,
+      "U-infraestructura": 4,
+      "B-país": 5,
+      "I-país": 6,
+      "L-país": 7,
+      "U-país": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]

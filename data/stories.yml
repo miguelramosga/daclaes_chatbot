@@ -1,0 +1,732 @@
+version: "3.1"
+
+stories:
+
+- story: saludando
+  steps: 
+  - intent: saludo
+  - action: utter_saludo
+
+- story: despidiendo
+  steps: 
+  - intent: despedida
+  - action: utter_despedida
+
+- story: afirmando
+  steps:
+  - intent: afirmar
+  - action: utter_afirmacion
+
+- story: negando
+  steps:
+  - intent: negar
+  - action: utter_negacion
+
+- story: agradeciendo
+  steps:
+  - intent: agradecer
+  - action: utter_agradecimiento
+
+- story: preguntar_identidad_detalles
+  steps:
+  - intent: identidad
+  - action: utter_identidad
+
+- story: usuario_conocer_infraestructuras
+  steps:
+  - intent: conocer_infraestructuras
+  - action: utter_conocer_infraestructuras
+
+- story: usuario_conocer_clarin
+  steps:
+  - intent: conocer_infraestructuras
+    entities:
+      - clarin: clarin
+  - action: utter_conocer_clarin
+
+- story: usuario_conocer_dariah
+  steps:
+  - intent: conocer_infraestructuras
+    entities:
+      - dariah: dariah
+  - action: utter_conocer_dariah
+
+- story: usuario_conocer_clarink
+  steps:
+  - intent: conocer_infraestructuras
+    entities:
+      - clarin_k: clarin k
+  - action: utter_conocer_clarink
+
+- story: usuario_analizar_etiquetar_textos
+  steps:
+  - intent: analizar_etiquetar_textos
+  - action: utter_analizar_etiquetar_textos
+
+- story: usuario_analizar_etiquetar_textos_clarin
+  steps:
+  - intent: analizar_etiquetar_textos
+    entities:
+      - clarin: clarin 
+  - action: utter_analizar_etiquetar_textos_clarin
+
+- story: usuario_analizar_etiquetar_textos_clarink
+  steps:
+  - intent: analizar_etiquetar_textos
+    entities:
+      - clarin_k: clarin k
+  - action: utter_analizar_etiquetar_textos_clarink
+
+- story: usuario_analizar_etiquetar_textos_clarin_2
+  steps:
+  - intent: analizar_etiquetar_textos
+  - action: utter_analizar_etiquetar_textos
+  - intent: conocer_infraestructuras
+    entities:
+      - clarin: clarin
+  - action: utter_analizar_etiquetar_textos_clarin
+
+- story: usuario_analizar_etiquetar_textos_clarink_2
+  steps:
+  - intent: analizar_etiquetar_textos
+  - action: utter_analizar_etiquetar_textos
+  - intent: conocer_infraestructuras
+    entities:
+      - clarin_k: clarin k
+  - action: utter_analizar_etiquetar_textos_clarink
+
+- story: usuario_analizar_etiquetar_textos_desde_clarin
+  steps:
+  - intent: conocer_infraestructuras
+    entities:
+      - clarin: clarin
+  - action: utter_conocer_clarin
+  - intent: analizar_etiquetar_textos
+  - action: utter_analizar_etiquetar_textos_clarin
+
+- story: usuario_analizar_etiquetar_textos_desde_clarink
+  steps:
+  - intent: conocer_infraestructuras
+    entities:
+    - clarin_k: clarin k
+  - action: utter_conocer_clarink
+  - intent: analizar_etiquetar_textos
+  - action: utter_analizar_etiquetar_textos_clarink
+
+- story: usuario_analizar_etiquetar_textos_udpipe
+  steps:
+  - intent: analizar_etiquetar_textos
+    entities:
+    - udpipe: UDPipe
+  - action: utter_analizar_etiquetar_textos_udpipe
+
+- story: usuario_analizar_etiquetar_textos_voyant_tools
+  steps:
+  - intent: analizar_etiquetar_textos
+    entities:
+    - voyant_tools: Voyant Tools
+  - action: utter_analizar_etiquetar_textos_voyant_tools
+
+- story: usuario_analizar_etiquetar_textos_text_tonsorium
+  steps:
+  - intent: analizar_etiquetar_textos
+    entities:
+    - text_tonsorium: Text Tonsorium
+  - action: utter_analizar_etiquetar_textos_text_tonsorium
+
+- story: usuario_analizar_etiquetar_textos_nlp_hub
+  steps:
+  - intent: analizar_etiquetar_textos
+    entities:
+    - nlp_hub: NLP-HUB
+  - action: utter_analizar_etiquetar_textos_nlp_hub
+
+- story: usuario_analizar_etiquetar_textos_nametag
+  steps:
+  - intent: analizar_etiquetar_textos
+    entities:
+    - nametag: NameTag
+  - action: utter_analizar_etiquetar_textos_nametag
+
+- story: usuario_analizar_etiquetar_textos_websty
+  steps:
+  - intent: analizar_etiquetar_textos
+    entities:
+    - websty: WebSty
+  - action: utter_analizar_etiquetar_textos_websty
+
+- story: usuario_analizar_etiquetar_textos_vocabulary_analyzer
+  steps:
+  - intent: analizar_etiquetar_textos
+    entities:
+    - vocabulary_analyzer: Vocabulary analizer
+  - action: utter_analizar_etiquetar_textos_vocabulary_analyzer
+
+- story: usuario_analizar_etiquetar_textos_ngram_statistics
+  steps:
+  - intent: analizar_etiquetar_textos
+    entities:
+    - ngram_statistics: Ngram Statistics
+  - action: utter_analizar_etiquetar_textos_ngram_statistics
+
+- story: usuario_analizar_etiquetar_textos_upf_pos_tagger
+  steps:
+  - intent: analizar_etiquetar_textos
+    entities:
+    - upf_pos_tagger: UPF Freeling-based part-of-speech tagger
+  - action: utter_analizar_etiquetar_textos_upf_pos_tagger
+
+- story: usuario_analizar_etiquetar_textos_analisis_relaciones_dependencias
+  steps:
+  - intent: analizar_etiquetar_textos
+    entities:
+    - analisis_relaciones_dependencias: Análisis de relaciones de dependencias
+  - action: utter_analizar_etiquetar_textos_analisis_relaciones_dependencias
+
+- story: usuario_analizar_etiquetar_textos_freeling_named_entity_recognition
+  steps:
+  - intent: analizar_etiquetar_textos
+    entities:
+    - freeling_named_entity_recognition: Freeling Named Entity Recognition
+  - action: utter_analizar_etiquetar_textos_freeling_named_entity_recognition
+
+- story: usuario_analizar_etiquetar_textos_wsd_ixa
+  steps:
+  - intent: analizar_etiquetar_textos
+    entities:
+    - wsd_ixa: WSD-IXA
+  - action: utter_analizar_etiquetar_textos_wsd_ixa
+
+- story: usuario_analizar_etiquetar_textos_ixa_pipes
+  steps:
+  - intent: analizar_etiquetar_textos
+    entities:
+    - ixa_pipes: Ixa pipes
+  - action: utter_analizar_etiquetar_textos_ixa_pipes
+
+- story: usuario_analizar_etiquetar_textos_ixakat
+  steps:
+  - intent: analizar_etiquetar_textos
+    entities:
+    - ixakat: ixaKat
+  - action: utter_analizar_etiquetar_textos_ixakat
+
+- story: usuario_analizar_etiquetar_textos_maltixa
+  steps: 
+  - intent: analizar_etiquetar_textos
+    entities:
+    - maltixa: Maltixa
+  - action: utter_analizar_etiquetar_textos_maltixa
+
+- story: usuario_analizar_etiquetar_textos_eustagger
+  steps:
+  - intent: analizar_etiquetar_textos
+    entities:
+    - eustagger: Eustagger
+  - action: utter_analizar_etiquetar_textos_eustagger
+
+- story: usuario_analizar_etiquetar_textos_xuxen
+  steps:
+  - intent: analizar_etiquetar_textos
+    entities:
+    - xuxen: Xuxen
+  - action: utter_analizar_etiquetar_textos_xuxen
+
+- story: usuario_analizar_etiquetar_textos_analhitza
+  steps:
+  - intent: analizar_etiquetar_textos
+    entities: 
+    - analhitza: Analhitza
+  - action: utter_analizar_etiquetar_textos_analhitza
+
+- story: usuario_trabajar_metadatos
+  steps:
+  - intent: trabajar_metadatos
+  - action: utter_trabajar_metadatos
+
+- story: usuario_trabajar_metadatos_cmdi_explorer
+  steps:
+  - intent: trabajar_metadatos
+    entities:
+    - cmdi_explorer: CMDI Explorer
+  - action: utter_trabajar_metadatos_cmdi_explorer
+
+- story: usuario_trabajar_metadatos_coala
+  steps:
+  - intent: trabajar_metadatos
+    entities:
+    - coala: Coala
+  - action: utter_trabajar_metadatos_coala
+
+- story: usuario_analizar_audio
+  steps:
+  - intent: analizar_audio
+  - action: utter_analizar_audio
+
+- story: usuario_analizar_audio_speakdiar
+  steps:
+  - intent: analizar_audio
+    entities:
+    - speakdiar: SpeakDiar
+  - action: utter_analizar_audio_speakdiar
+
+- story: usuario_analizar_audio_voice_activity_detection
+  steps:
+  - intent: analizar_audio
+    entities:
+    - voice_activity_detection: Voice Activity Detection
+  - action: utter_analizar_audio_voice_activity_detection
+
+- story: usuario_analizar_audio_webmaus_general
+  steps:
+  - intent: analizar_audio
+    entities:
+    - webmaus_general: WebMAUS General
+  - action: utter_analizar_audio_webmaus_general
+
+- story: usuario_analizar_audio_webmaus_basic
+  steps:
+  - intent: analizar_audio
+    entities:
+    - webmaus_basic: WebMAUS Basic
+  - action: utter_analizar_audio_webmaus_basic
+
+- story: usuario_analizar_audio_webminni
+  steps:
+  - intent: analizar_audio
+    entities:
+    - webminni: WebMINNI
+  - action: utter_analizar_audio_webminni
+
+- story: usuario_analizar_audio_chunker
+  steps:
+  - intent: analizar_audio
+    entities:
+    - chunker: Chunker
+  - action: utter_analizar_audio_chunker
+
+- story: usuario_analizar_audio_channelseparator
+  steps:
+  - intent: analizar_audio
+    entities:
+    - channelseparator: ChannelSeparator
+  - action: utter_analizar_audio_channelseparator
+
+- story: usuario_analizar_audio_formant_analysis
+  steps:
+  - intent: analizar_audio
+    entities:
+    - formant_analysis: Formant Analysis
+  - action: utter_analizar_audio_formant_analysis
+
+- story: usuario_analizar_audio_emu_webapp
+  steps:
+  - intent: analizar_audio
+    entities:
+    - emu_webapp: EMU webApp
+  - action: utter_analizar_audio_emu_webapp
+
+- story: usuario_convertir_formatos_audio
+  steps:
+  - intent: convertir_formatos_audio
+  - action: utter_convertir_formatos_audio
+
+- story: usuario_convertir_formatos_audio_g2p
+  steps:
+  - intent: convertir_formatos_audio
+    entities: 
+    - g2p: G2P
+  - action: utter_convertir_formatos_audio_g2p
+
+- story: usuario_convertir_formatos_audio_annotconv
+  steps:
+  - intent: convertir_formatos_audio
+    entities:
+    - annotconv: AnnotConv
+  - action: utter_convertir_formatos_audio_annotconv
+
+- story: usuario_convertir_formatos_audio_chunk_preparation
+  steps: 
+  - intent: convertir_formatos_audio
+    entities:
+    - chunk_preparation: Chunk Preparation
+  - action: utter_convertir_formatos_audio_chunk_preparation
+
+- story: usuario_mejorar_calidad_manejo
+  steps:
+  - intent: mejorar_calidad_manejo
+  - action: utter_mejorar_calidad_manejo
+
+- story: usuario_mejorar_calidad_manejo_audioenhance
+  steps:
+  - intent: mejorar_calidad_manejo
+    entities:
+    - audioenhance: AudioEnhance
+  - action: utter_mejorar_calidad_manejo_audioenhance
+
+- story: usuario_mejorar_calidad_manejo_textenhance
+  steps:
+  - intent: mejorar_calidad_manejo
+    entities: 
+    - textenhance: TextEnhance
+  - action: utter_mejorar_calidad_manejo_textenhance
+
+- story: usuario_mejorar_calidad_manejo_textalign
+  steps:
+  - intent: mejorar_calidad_manejo
+    entities:
+    - textalign: TextAlign
+  - action: utter_mejorar_calidad_manejo_textalign
+
+- story: usuario_sistemas_gestion_contenido
+  steps:
+  - intent: sistemas_gestion_contenido
+  - action: utter_sistemas_gestion_contenido
+
+- story: usuario_servicios_varios_dariah
+  steps:
+  - intent: servicios_varios_dariah
+  - action: utter_servicios_varios_dariah
+
+- story: usuario_servicios_varios_dariah_dariah_repository
+  steps:
+  - intent: servicios_varios_dariah
+    entities: 
+    - dariah_repository: DARIAH-DE Repository
+  - action: utter_servicios_varios_dariah_dariah_repository
+
+- story: usuario_servicios_varios_dariah_vocabs_services
+  steps:
+  - intent: servicios_varios_dariah
+    entities:
+    - vocabs_services: Vocabs services
+  - action: utter_servicios_varios_dariah_vocabs_services
+
+- story: usuario_servicios_varios_dariah_standardization_survival_kit
+  steps:
+  - intent: servicios_varios_dariah
+    entities:
+    - standardization_survival_kit: Standardization Survival Kit
+  - action: utter_servicios_varios_dariah_standardization_survival_kit
+
+- story: usuario_servicios_varios_dariah_dariah_docs
+  steps:
+  - intent: servicios_varios_dariah
+    entities:
+    - dariah_docs: DARIAH docs
+  - action: utter_servicios_varios_dariah_dariah_docs
+
+- story: usuario_servicios_varios_dariah_isidore
+  steps:
+  - intent: servicios_varios_dariah
+    entities:
+    - isidore: Isidore
+  - action: utter_servicios_varios_dariah_isidore
+
+- story: usuario_servicios_varios_dariah_collection_registry
+  steps:
+  - intent: servicios_varios_dariah
+    entities: 
+    - collection_registry: Collection Registry
+  - action: utter_servicios_varios_dariah_collection_registry
+
+- story: usuario_servicios_varios_dariah_dariah_wiki
+  steps:
+  - intent: servicios_varios_dariah
+    entities:
+    - dariah_wiki: DARIAH WIKI
+  - action: utter_servicios_varios_dariah_dariah_wiki
+
+- story: usuario_servicios_varios_dariah_codimd
+  steps:
+  - intent: servicios_varios_dariah
+    entities:
+    - codimd: CodiMD
+  - action: utter_servicios_varios_dariah_codimd
+
+- story: usuario_servicios_varios_dariah_generic_search
+  steps:
+  - intent: servicios_varios_dariah
+    entities:
+    - generic_search: Generic Search
+  - action: utter_servicios_varios_dariah_generic_search
+
+- story: usuario_servicios_varios_dariah_tadirah
+  steps:
+  - intent: servicios_varios_dariah
+    entities:
+    - tadirah: TaDiRAH
+  - action: utter_servicios_varios_dariah_tadirah
+
+- story: usuario_servicios_varios_dariah_dariah_aai
+  steps:
+  - intent: servicios_varios_dariah
+    entities:
+    - dariah_aai: DARIAH AAI
+  - action: utter_servicios_varios_dariah_dariah_aai
+
+- story: usuario_formacion_dariah
+  steps: 
+  - intent: formacion_dariah
+  - action: utter_formacion_dariah
+
+- story: usuario_formacion_dariah_dariah_campus
+  steps:
+  - intent: formacion_dariah
+    entities:
+    - dariah_campus: DARIAH-Campus
+  - action: utter_formacion_dariah_dariah_campus
+
+- story: usuario_formacion_dariah_parthenos
+  steps:
+  - intent: formacion_dariah
+    entities:
+    - parthenos: PARTHENOS
+  - action: utter_formacion_dariah_parthenos
+
+- story: usuario_formacion_dariah_dariahteach
+  steps:
+  - intent: formacion_dariah
+    entities:
+    - dariahteach: dariahTeach
+  - action: utter_formacion_dariah_dariahteach
+
+- story: utter_herramientas_dariah
+  steps:
+  - intent: herramientas_dariah
+  - action: utter_herramientas_dariah
+
+- story: utter_herramientas_dariah_topics_explorer
+  steps:
+  - intent: herramientas_dariah
+    entities: 
+    - topics_explorer: Topics Explorer
+  - action: utter_herramientas_dariah_topics_explorer
+
+- story: usuario_herramientas_dariah_mei_score_editor
+  steps:
+  - intent: herramientas_dariah
+    entities:
+    - mei_score_editor: MEI Score Editor
+  - action: utter_herramientas_dariah_mei_score_editor
+
+- story: usuario_herramientas_dariah_conedakor
+  steps:
+  - intent: herramientas_dariah
+    entities:
+    - conedakor: ConedaKOR
+  - action: utter_herramientas_dariah_conedakor
+
+- story: usuario_herramientas_dariah_textgrid
+  steps:
+  - intent: herramientas_dariah
+    entities:
+    - textgrid: TextGrid
+  - action: utter_herramientas_dariah_textgrid
+
+- story: usuario_herramientas_dariah_geo_browser
+  steps: 
+  - intent: herramientas_dariah
+    entities:
+    - geo_browser: Geo-Browser
+  - action: utter_herramientas_dariah_geo_browser
+
+- story: usuario_transcribir_audio_texto
+  steps:
+  - intent: transcribir_audio_texto
+  - action: utter_transcribir_audio_texto
+
+- story: usuario_transcribir_audio_texto_phosyl
+  steps:
+  - intent: transcribir_audio_texto
+    entities:
+    - phosyl: Pho2Syl
+  - action: utter_transcribir_audio_texto_phosyl
+
+- story: usuario_transcribir_audio_texto_subtitle
+  steps:
+  - intent: transcribir_audio_texto
+    entities:
+    - subtitle: Subtitle
+  - action: utter_transcribir_audio_texto_subtitle
+
+- story: usuario_transcribir_audio_texto_anonymizer
+  steps: 
+  - intent: transcribir_audio_texto
+    entities:
+    - anonymizer: Anonymizer
+  - action: utter_transcribir_audio_texto_anonymizer
+
+- story: usuario_analizar_poesia
+  steps:
+  - intent: analizar_poesia
+  - action: utter_analizar_poesia
+
+- story: usuario_analizar_poesia_averell
+  steps:
+  - intent: analizar_poesia
+    entities:
+    - averell: Averell
+  - action: utter_analizar_poesia_averell
+
+- story: usuario_analizar_poesia_jollyjumper
+  steps:
+  - intent: analizar_poesia
+    entities: 
+    - jollyjumper: Jollyjumper
+  - action: utter_analizar_poesia_jollyjumper
+
+- story: usuario_analizar_poesia_rantanplan
+  steps:
+  - intent: analizar_poesia
+    entities:
+    - rantanplan: Rantanplan
+  - action: utter_analizar_poesia_rantanplan
+
+- story: usuario_analizar_poesia_poetrylab
+  steps:
+  - intent: analizar_poesia
+    entities:
+    - poetrylab: PoetryLab
+  - action: utter_analizar_poesia_poetrylab
+
+- story: usuario_analizar_dialectos
+  steps:
+  - intent: analizar_dialectos
+  - action: utter_analizar_dialectos
+
+- story: usuario_analizar_dialectos_pdmapping
+  steps:
+  - intent: analizar_dialectos
+    entities:
+    - pdmapping: PDMapping
+  - action: utter_analizar_dialectos_pdmapping
+
+- story: usuario_analizar_dialectos_folerpa
+  steps:
+  - intent: analizar_dialectos
+    entities:
+    - folerpa: FOLErPa
+  - action: utter_analizar_dialectos_folerpa
+
+- story: usuario_analizar_dialectos_basyque
+  steps:
+  - intent: analizar_dialectos
+    entities:
+    - basyque: BASYQUE
+  - action: utter_analizar_dialectos_basyque
+
+- story: usuario_conocer_corpus
+  steps:
+  - intent: conocer_corpus
+  - action: utter_conocer_corpus
+
+- story: usuario_conocer_corpus_rilg
+  steps:
+  - intent: conocer_corpus
+    entities:
+    - rilg: RILG
+  - action: utter_conocer_corpus_rilg
+
+- story: usuario_conocer_corpus_etsc
+  steps:
+  - intent: conocer_corpus
+    entities:
+    - etsc: ETSC
+  - action: utter_conocer_corpus_etsc
+
+- story: usuario_conocer_corpus_ud_treebank
+  steps:
+  - intent: conocer_corpus
+    entities:
+    - ud_treebank: Universal Dependencies
+  - action: utter_conocer_corpus_ud_treebank
+
+- story: usuario_conocer_corpus_epec_korref
+  steps:
+  - intent: conocer_corpus
+    entities:
+    - epec_korref: EPEC-KORREF
+  - action: utter_conocer_corpus_epec_korref
+
+- story: usuario_conocer_corpus_epec_eusemcor
+  steps:
+  - intent: conocer_corpus
+    entities:
+    - epec_eusemcor: EPEC-EuSemcor
+  - action: utter_conocer_corpus_epec_eusemcor
+
+- story: usuario_conocer_corpus_zt_corpusa
+  steps: 
+  - intent: conocer_corpus
+    entities:
+    - zt_corpusa: ZT corpusa
+  - action: utter_conocer_corpus_zt_corpusa
+
+- story: usuario_conocer_corpus_epec_dep
+  steps: 
+  - intent: conocer_corpus
+    entities:
+    - epec_dep: EPEC-DEP
+  - action: utter_conocer_corpus_epec_dep
+
+- story: usuario_conocer_recursos_lexicos
+  steps:
+  - intent: conocer_recursos_lexicos
+  - action: utter_conocer_recursos_lexicos
+
+- story: usuario_conocer_recursos_lexicos_diccionario_gallego
+  steps:
+  - intent: conocer_recursos_lexicos
+    entities:
+    - diccionario_gallego: Diccionario gallego
+  - action: utter_conocer_recursos_lexicos_diccionario_gallego
+
+- story: usuario_conocer_recursos_lexicos_konbitzul
+  steps:
+  - intent: conocer_recursos_lexicos
+    entities:
+    - konbitzul: Konbitzul
+  - action: utter_conocer_recursos_lexicos_konbitzul
+
+- story: usuario_conocer_recursos_lexicos_euswn
+  steps:
+  - intent: conocer_recursos_lexicos
+    entities:
+    - euswn: EusWN
+  - action: utter_conocer_recursos_lexicos_euswn
+
+- story: usuario_conocer_recursos_lexicos_erolda
+  steps:
+  - intent: conocer_recursos_lexicos
+    entities:
+    - erolda: e-ROLda
+  - action: utter_conocer_recursos_lexicos_erolda
+
+- story: usuario_conocer_modelos_ling
+  steps:
+  - intent: conocer_modelos_ling
+  - action: utter_conocer_modelos_ling
+
+- story: usuario_conocer_modelos_ling_edgk
+  steps:
+  - intent: conocer_modelos_ling
+    entities:
+    - edgk: EDGK
+  - action: utter_conocer_modelos_ling_edgk
+
+- story: usuario_conocer_modelos_ling_berteus
+  steps: 
+  - intent: conocer_modelos_ling
+    entities:
+    - berteus: BERTeus
+  - action: utter_conocer_modelos_ling_berteus
+
+- story: usuario_herramientas_geograficas
+  steps:
+  - intent: herramientas_geograficas
+  - action: utter_herramientas_geograficas
+
+
+
+
