@@ -52,7 +52,7 @@ responses:
           \n- Si te sabes el nombre de alguna herramienta de DARIAH, CLARIN o el Centro K en España con la que se pueda abordar el castellano o las lenguas cooficiales, pregúntame por ella y te daré información al respecto."
 
   utter_conocer_infraestructuras:
-  - text: "Las infraestructuras europeas más importantes en el área de las Humanidades Digitales son CLARIN y DARIAH, aunque también es muy útil el centro CLARIN K que hay en España. Selecciona el botón que quieras en función de la infraestructura sobre la que quieras más información."
+  - text: "Las infraestructuras europeas más importantes en el área de las Humanidades Digitales son CLARIN y DARIAH, aunque también es muy útil el centro CLARIN K que hay en España. Haz clic en el botón que quieras en función de la infraestructura sobre la que quieras más información."
     buttons:
       - title: "CLARIN"
         payload: '/conocer_infraestructuras{{"clarin":"clarin"}}'
@@ -564,26 +564,6 @@ responses:
   - text: "Las herramientas que permiten llevar a cabo un análisis que esté relacionado con aspectos geográficos en el área de las Humanidades Digitales son muchas y pueden llegar a ser sumamente útiles para los investigadores.
           \n\nAquella que merece destacarse para los investigadores que quieran realizar investigaciones en torno a las lenguas de España es Cartografia dos apelidos de Galicia, que se encuentra en CLARIN Kpermite estudiar los apellidos de Galicia. El usuario puede ver en un mapa la distribución y la frecuencia de los nombres por zonas.  
           \n\nSe puede usar con el gallego."
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-  
-
 
 
 
