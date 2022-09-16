@@ -258,7 +258,7 @@ nlu:
     - detalles de [ZT corpusa](zt_corpusa)
     - dime algo de [EPEC-DEP](epec_dep)
 
-- intent: conocer_recursos_léxicos
+- intent: conocer_recursos_lexicos
   examples: |
     - quiero conocer los recursos léxicos
     - CLARIN K recursos léxicos
