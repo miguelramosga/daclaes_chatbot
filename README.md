@@ -41,6 +41,8 @@ Lo siguiente que se debe hacer es ir a la ubicación donde se ha puesto lo desca
 
 ### Cuarto paso:
 
+Ejecutar instrucciones de Rasa. 
 
+Una vez se llega a este punto, ya pueden ejecutarse las instrucciones de Rasa. La primera que debe llevarse a cabo es "rasa train", pues eso permitirá que todo el modelo se entrene de acuerdo a cómo esta diseñado. La siguiente ya sería "rasa shell", lo que conduce a poder interactuar con el chatbot y, finalmente, llevar a cabo una conversación. 
 
 
