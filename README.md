@@ -22,7 +22,7 @@ Se tienen que descargar los archivos que hay en https://github.com/miguelramosga
 
 Algunos de estos archivos son secundarios y, como tal, no aportan a la arquitectura del modelo. Los realmente importantes son ".rasa/cache", "actions", "data", "models", "tests", "config.yml", "credentials.yml", "domain.yml" y "endpoints.yml". 
 
-Para descargarlo todo, es necesario tener Git instalado en el ordenador (Git Bash), por lo que, si no se tiene, se debe proceder a su descarga. Lo mejor es crear una carpeta previamente en local para que, ahí, se haga clic derecho y se seleccione la opción "Git Bash here". Eso abrirá la terminal correspondiente, donde ya es posible descargar lo mencionado. 
+Para descargarlo todo, es necesario tener Git instalado en el ordenador (Git Bash), por lo que, si no se tiene, se debe proceder a su descarga. Una vez hecho esto, lo mejor es crear una carpeta previamente en local para que, ahí, se haga clic derecho y se seleccione la opción "Git Bash here". Eso abrirá la terminal correspondiente, donde ya es posible descargar lo mencionado. 
 
 Para ello, se debe escribir lo siguiente: "git clone https://github.com/miguelramosga/daclaes_chatbot.git", lo que permite que la descarga de los archivos comience directamente. Una vez se tenga descargado, ya se puede trabajar con el proyecto o, en este caso, visualizarlo en detalle e interactuar con el chatbot. 
 
