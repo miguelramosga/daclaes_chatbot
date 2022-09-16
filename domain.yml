@@ -103,7 +103,7 @@ responses:
       - title: "Consultar corpus"
         payload: "/conocer_corpus"
       - title: "Consultar recursos léxicos"
-        payload: "/conocer_recursos_léxicos"
+        payload: "/conocer_recursos_lexicos"
       - title: "Consultar modelos lingüísticos"
         payload: "/conocer_modelos_ling"
   
