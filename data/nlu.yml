@@ -86,9 +86,13 @@ nlu:
     - información [clarin](clarin)
     - info [clarin](clarin)
     - qué es [dariah](dariah)
+    - cuéntame más cosas de [dariah](dariah)
     - me interesa mucho conocer algo de [dariah](dariah)
     - explícame qué es [clarin k](clarin_k)
     - a ver dime algo de [clarin k](clarin_k)
+    - [clarin k](clarin_k)
+    - [dariah](dariah)
+    - quiero saber alguna cosa más de [clarin k](clarin_k)
 
 - intent: analizar_etiquetar_textos
   examples: |
