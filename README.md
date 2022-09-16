@@ -22,6 +22,23 @@ Se tienen que descargar los archivos que hay en https://github.com/miguelramosga
 
 Algunos de estos archivos son secundarios y, como tal, no aportan a la arquitectura del modelo. Los realmente importantes son ".rasa/cache", "actions", "data", "models", "tests", "config.yml", "credentials.yml", "domain.yml" y "endpoints.yml". 
 
-Para descargarlo todo, es necesario tener Git instalado en el ordenador (Git Bash), por lo que, si no se tiene, se debe proceder a su descarga. Lo mejor es crear una carpeta previamente en local para que, ahí, se haga clic derecho y se seleccione la opción "Git Bash here". Eso abrirá la terminal correspondiente, donde ya es posible descargar lo contenido. 
+Para descargarlo todo, es necesario tener Git instalado en el ordenador (Git Bash), por lo que, si no se tiene, se debe proceder a su descarga. Lo mejor es crear una carpeta previamente en local para que, ahí, se haga clic derecho y se seleccione la opción "Git Bash here". Eso abrirá la terminal correspondiente, donde ya es posible descargar lo mencionado. 
 
 Para ello, se debe escribir lo siguiente: "git clone https://github.com/miguelramosga/daclaes_chatbot.git", lo que permite que la descarga de los archivos comience directamente. Una vez se tenga descargado, ya se puede trabajar con el proyecto o, en este caso, visualizarlo en detalle e interactuar con el chatbot. 
+
+
+### Tercer paso: 
+
+Se debe abrir el proyecto con Rasa. 
+
+Para conseguir ejecutar el proyecto con Python, es preciso volver a la terminal de Anaconda. Aquí pueden distinguirse dos fases distintas: en el caso de que la terminal mencionada se tenga abierta y se haya procedido de la manera que se ha descrito en el paso uno, se puede pasar directamente a la segunda fase. 
+
+#### Fase 1: Si se tiene el proyecto descargado, pero se ha cerrado lo realizado en el paso uno, es necesario volver a activar el entorno que se ha creado en dicho paso. Para ello, hay que escribir "conda activate chatbot" en la línea de comando de Anaconda. 
+
+#### Fase 2: Lo siguiente que se debe hacer es ir a la ubicación donde se ha puesto lo descargado desde GitHub, que será la carpeta que se ha creado en el paso dos para guardarlo ahí. La instrucción que se debe dar es esta: "cd" + la ruta de la carpeta en cuestión; por ejemplo, "cd C:\User\miguelramosga\Documentos\DACLAES". 
+
+### Cuarto paso:
+
+
+
+
