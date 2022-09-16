@@ -45,6 +45,6 @@ Ejecutar instrucciones de Rasa.
 
 Una vez se llega a este punto, ya pueden ejecutarse las instrucciones de Rasa. La primera que debe llevarse a cabo es "rasa train", pues eso permitirá que todo el modelo se entrene de acuerdo a cómo esta diseñado. La siguiente ya sería "rasa shell", lo que conduce a poder interactuar con el chatbot y, finalmente, llevar a cabo una conversación. 
 
-En el caso de que esto dé problemas al usuario, una segunda opción para poder interactuar con DACLA-ES Toolbot es escribir la siguiente instrucción: rasa run --model daclaes_chatbot.
+En el caso de que esto dé problemas al usuario, una segunda opción para poder interactuar con DACLA-ES Toolbot es escribir la siguiente instrucción: "rasa run --model daclaes_chatbot".
 
 
