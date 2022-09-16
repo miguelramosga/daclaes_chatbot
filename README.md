@@ -33,9 +33,11 @@ Se debe abrir el proyecto con Rasa.
 
 Para conseguir ejecutar el proyecto con Python, es preciso volver a la terminal de Anaconda. Aquí pueden distinguirse dos fases distintas: en el caso de que la terminal mencionada se tenga abierta y se haya procedido de la manera que se ha descrito en el paso uno, se puede pasar directamente a la segunda fase. 
 
-#### Fase 1: Si se tiene el proyecto descargado, pero se ha cerrado lo realizado en el paso uno, es necesario volver a activar el entorno que se ha creado en dicho paso. Para ello, hay que escribir "conda activate chatbot" en la línea de comando de Anaconda. 
+#### Fase 1: 
+Si se tiene el proyecto descargado, pero se ha cerrado lo realizado en el paso uno, es necesario volver a activar el entorno que se ha creado en dicho paso. Para ello, hay que escribir "conda activate chatbot" en la línea de comando de Anaconda. 
 
-#### Fase 2: Lo siguiente que se debe hacer es ir a la ubicación donde se ha puesto lo descargado desde GitHub, que será la carpeta que se ha creado en el paso dos para guardarlo ahí. La instrucción que se debe dar es esta: "cd" + la ruta de la carpeta en cuestión; por ejemplo, "cd C:\User\miguelramosga\Documentos\DACLAES". 
+#### Fase 2: 
+Lo siguiente que se debe hacer es ir a la ubicación donde se ha puesto lo descargado desde GitHub, que será la carpeta que se ha creado en el paso dos para guardarlo ahí. La instrucción que se debe dar es esta: "cd" + la ruta de la carpeta en cuestión; por ejemplo, "cd C:\User\miguelramosga\Documentos\DACLAES". 
 
 ### Cuarto paso:
 
