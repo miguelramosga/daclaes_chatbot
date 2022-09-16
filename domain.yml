@@ -98,7 +98,7 @@ responses:
         payload: "/analizar_dialectos"
       - title: "Analizar cuestiones geográficas"
         payload: "/herramientas_geograficas"
-      - titlee: "Analizar y etiquetar textos"
+      - title: "Analizar y etiquetar textos"
         payload: "/analizar_etiquetar_textos"
       - title: "Consultar corpus"
         payload: "/conocer_corpus"
