@@ -256,7 +256,7 @@ nlu:
     - info de [EPEC-KORREF](epec_korref)
     - cuéntame alguna cosa de [EPEC-EuSemcor](epec_eusemcor)
     - detalles de [ZT corpusa](zt_corpusa)
-    - dime algo de [EPEC-DEP](epec-dep)
+    - dime algo de [EPEC-DEP](epec_dep)
 
 - intent: conocer_recursos_léxicos
   examples: |
